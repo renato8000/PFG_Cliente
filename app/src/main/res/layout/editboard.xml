@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -21,8 +26,9 @@
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
         android:includeFontPadding="true"
+        android:fontFamily="monospace"
         android:typeface="monospace"
-        android:textSize="10dip">
+        android:textSize="12sp">
     </TextView>
     <LinearLayout
         android:orientation="horizontal"
@@ -30,18 +36,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <Button
-            android:text="@android:string/ok"
-            android:id="@+id/eb_ok"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </Button>
-        <Button
             android:text="@string/cancel"
             android:id="@+id/eb_cancel"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
         </Button>
+        <Button
+            android:text="@android:string/ok"
+            android:id="@+id/eb_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </Button>
     </LinearLayout>
 </LinearLayout>
+<include layout="@layout/left_drawer"/>
+</android.support.v4.widget.DrawerLayout>

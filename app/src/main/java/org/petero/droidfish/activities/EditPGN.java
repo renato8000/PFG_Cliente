@@ -56,8 +56,6 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-//import com.example.angie.droidfish10.R;
-
 public class EditPGN extends ListActivity {
     static ArrayList<GameInfo> gamesInFile = new ArrayList<GameInfo>();
     static boolean cacheValid = false;
@@ -239,9 +237,10 @@ public class EditPGN extends ListActivity {
     }
 
     private final void showList() {
-        progress.dismiss();
+        progress = null;
+        removeDialog(PROGRESS_DIALOG);
         setContentView(R.layout.select_game);
-        Util.overrideFonts(findViewById(android.R.id.content));
+        Util.overrideViewAttribs(findViewById(android.R.id.content));
         aa = new ArrayAdapter<GameInfo>(this, R.layout.select_game_list_item, gamesInFile) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -284,7 +283,6 @@ public class EditPGN extends ListActivity {
             }
         });
 
-//      lv.setTextFilterEnabled(true);
         filterText = (EditText)findViewById(R.id.select_game_filter);
         filterText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -433,6 +431,9 @@ public class EditPGN extends ListActivity {
                                        Toast.LENGTH_SHORT).show();
                     }
                 });
+                break;
+            case CANCEL:
+            case OK:
                 break;
             }
             setResult(RESULT_CANCELED);

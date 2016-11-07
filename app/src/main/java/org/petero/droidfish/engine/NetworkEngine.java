@@ -32,8 +32,6 @@ import org.petero.droidfish.Util;
 
 import android.content.Context;
 
-//import com.example.angie.droidfish10.R;
-
 /** Engine running on a different computer. */
 public class NetworkEngine extends UCIEngineBase {
     protected final Context context;

@@ -18,15 +18,10 @@
 
 package org.petero.droidfish.engine;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Map;
-import java.util.regex.Pattern;
+import java.util.TreeMap;
 
 import org.petero.droidfish.EngineOptions;
 import org.petero.droidfish.book.BookOptions;
@@ -52,14 +47,15 @@ public class DroidComputerPlayer {
     private final Context context;
     private final SearchListener listener;
     private final DroidBook book;
-    private EngineOptions engineOptions;
+    private EngineOptions engineOptions = new EngineOptions();
+    /** Pending UCI options to send when engine becomes idle. */
+    private Map<String,String> pendingOptions = new TreeMap<String,String>();
 
     /** Set when "ucinewgame" needs to be sent. */
     private boolean newGame = false;
 
     /** >1 if multiPV mode is supported. */
     private int maxPV = 1;
-    private int numCPUs = 1;
     private String engineName = "Computer";
 
     /** Engine state. */
@@ -118,7 +114,6 @@ public class DroidComputerPlayer {
         int movesToGo;          // Number of moves to next time control
 
         String engine;          // Engine name (identifier)
-        int engineThreads;      // Number of engine threads to use
         int strength;           // Engine strength setting (0 - 1000)
         int numPV;              // Number of PV lines to compute
 
@@ -149,14 +144,13 @@ public class DroidComputerPlayer {
          * Create a search request object.
          * @param id Search ID.
          * @param now Current system time.
-         * @paramm pos An earlier position from the game.
+         * @param pos An earlier position from the game.
          * @param mList List of moves to go from the earlier position to the current position.
          *              This list makes it possible for the computer to correctly handle draw
          *              by repetition/50 moves.
          * @param ponderEnabled True if pondering is enabled in the GUI. Can affect time management.
          * @param ponderMove Move to ponder, or null for non-ponder search.
          * @param engine Chess engine to use for searching.
-         * @param engineThreads  Number of engine threads to use, if supported by engine.
          * @param strength Engine strength setting.
          */
         public static SearchRequest searchRequest(int id, long now,
@@ -164,8 +158,7 @@ public class DroidComputerPlayer {
                                                   Position currPos, boolean drawOffer,
                                                   int wTime, int bTime, int wInc, int bInc, int movesToGo,
                                                   boolean ponderEnabled, Move ponderMove,
-                                                  String engine, int engineThreads,
-                                                  int strength) {
+                                                  String engine, int strength) {
             SearchRequest sr = new SearchRequest();
             sr.searchId = id;
             sr.startTime = now;
@@ -181,7 +174,6 @@ public class DroidComputerPlayer {
             sr.bInc = bInc;
             sr.movesToGo = movesToGo;
             sr.engine = engine;
-            sr.engineThreads = engineThreads;
             sr.strength = strength;
             sr.numPV = 1;
             sr.ponderEnabled = ponderEnabled;
@@ -199,7 +191,6 @@ public class DroidComputerPlayer {
          * @param currPos Position to analyze.
          * @param drawOffer True if other side have offered draw.
          * @param engine Chess engine to use for searching
-         * @param engineThreads Number of threads to use, or 0 for default value.
          * @param numPV    Multi-PV mode.
          */
         public static SearchRequest analyzeRequest(int id, Position prevPos,
@@ -207,7 +198,6 @@ public class DroidComputerPlayer {
                                                    Position currPos,
                                                    boolean drawOffer,
                                                    String engine,
-                                                   int engineThreads,
                                                    int numPV) {
             SearchRequest sr = new SearchRequest();
             sr.searchId = id;
@@ -220,7 +210,6 @@ public class DroidComputerPlayer {
             sr.isAnalyze = true;
             sr.wTime = sr.bTime = sr.wInc = sr.bInc = sr.movesToGo = 0;
             sr.engine = engine;
-            sr.engineThreads = engineThreads;
             sr.strength = 1000;
             sr.numPV = numPV;
             sr.ponderEnabled = false;
@@ -240,8 +229,8 @@ public class DroidComputerPlayer {
         }
     }
 
-    private EngineState engineState;
-    private SearchRequest searchRequest;
+    private EngineState engineState = new EngineState();
+    private SearchRequest searchRequest = null;
     private Thread engineMonitor;
 
     /** Constructor. Starts engine process if not already started. */
@@ -249,9 +238,6 @@ public class DroidComputerPlayer {
         this.context = context;
         this.listener = listener;
         book = DroidBook.getInstance();
-        engineOptions = new EngineOptions();
-        engineState = new EngineState();
-        searchRequest = null;
     }
 
     /** Return true if computer player is consuming CPU time. */
@@ -267,16 +253,30 @@ public class DroidComputerPlayer {
         }
     }
 
-    /** Return true if computer player is in IDLE state. */
-    public final synchronized boolean computerIdle() {
-        return engineState.state == MainState.IDLE;
+    /** Return true if computer player has been loaded. */
+    public final synchronized boolean computerLoaded() {
+        return (engineState.state != MainState.READ_OPTIONS) &&
+               (engineState.state != MainState.DEAD);
     }
-    
+
     public final synchronized UCIOptions getUCIOptions() {
         UCIEngine uci = uciEngine;
         if (uci == null)
             return null;
-        return uci.getUCIOptions();
+        UCIOptions opts = uci.getUCIOptions();
+        if (opts == null)
+            return null;
+        try {
+            opts = opts.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
+        for (Map.Entry<String,String> e : pendingOptions.entrySet()) {
+            UCIOptions.OptionBase o = opts.getOption(e.getKey());
+            if (o != null)
+                o.setFromString(e.getValue());
+        }
+        return opts;
     }
 
     /** Return maximum number of PVs supported by engine. */
@@ -293,11 +293,27 @@ public class DroidComputerPlayer {
         engineOptions = options;
     }
 
+    /** Send pending UCI option changes to the engine. */
+    private synchronized boolean applyPendingOptions() {
+        if (pendingOptions.isEmpty())
+            return false;
+        boolean modified = false;
+        UCIEngine uci = uciEngine;
+        if (uci != null)
+            modified = uci.setUCIOptions(pendingOptions);
+        pendingOptions.clear();
+        return modified;
+    }
+
     public synchronized void setEngineUCIOptions(Map<String,String> uciOptions) {
-        if (engineState.state == MainState.IDLE) {
+        pendingOptions.putAll(uciOptions);
+        boolean modified = true;
+        if (engineState.state == MainState.IDLE)
+            modified = applyPendingOptions();
+        if (modified) {
             UCIEngine uci = uciEngine;
             if (uci != null)
-                uci.setUCIOptions(uciOptions);
+                uci.saveIniFile(getUCIOptions());
         }
     }
 
@@ -311,8 +327,8 @@ public class DroidComputerPlayer {
         return engineName;
     }
 
-    /** Clear transposition table. Takes effect when next search started. */
-    public final synchronized void clearTT() {
+    /** Sends "ucinewgame". Takes effect when next search started. */
+    public final synchronized void uciNewGame() {
         newGame = true;
     }
 
@@ -522,12 +538,19 @@ public class DroidComputerPlayer {
             return;
         }
 
-        // Send "ucinewgame" (clear hash table) if needed
+        // Send "ucinewgame" if needed
         if (newGame) {
             uciEngine.writeLineToEngine("ucinewgame");
             uciEngine.writeLineToEngine("isready");
             engineState.setState(MainState.WAIT_READY);
             newGame = false;
+            return;
+        }
+
+        // Apply pending UCI option changes
+        if (applyPendingOptions()) {
+            uciEngine.writeLineToEngine("isready");
+            engineState.setState(MainState.WAIT_READY);
             return;
         }
 
@@ -574,7 +597,6 @@ public class DroidComputerPlayer {
             }
             uciEngine.setOption("Ponder", sr.ponderEnabled);
             uciEngine.setOption("UCI_AnalyseMode", false);
-            uciEngine.setNThreads(sr.engineThreads > 0 ? sr.engineThreads : numCPUs);
             uciEngine.writeLineToEngine(posStr.toString());
             if (sr.wTime < 1) sr.wTime = 1;
             if (sr.bTime < 1) sr.bTime = 1;
@@ -611,7 +633,6 @@ public class DroidComputerPlayer {
             }
             uciEngine.writeLineToEngine(posStr.toString());
             uciEngine.setOption("UCI_AnalyseMode", true);
-            uciEngine.setNThreads(sr.engineThreads > 0 ? sr.engineThreads : numCPUs);
             StringBuilder goStr = new StringBuilder(96);
             goStr.append("go infinite");
             if (sr.searchMoves != null) {
@@ -655,9 +676,6 @@ public class DroidComputerPlayer {
 
         uciEngine.clearOptions();
         uciEngine.writeLineToEngine("uci");
-        int nThreads = getNumCPUs();
-        if (nThreads > 8) nThreads = 8;
-        numCPUs = nThreads;
         maxPV = 1;
         engineState.engine = searchRequest.engine;
         engineState.setState(MainState.READ_OPTIONS);
@@ -700,6 +718,7 @@ public class DroidComputerPlayer {
         switch (engineState.state) {
         case READ_OPTIONS: {
             if (readUCIOption(uci, s)) {
+                pendingOptions.clear();
                 uci.initOptions(engineOptions);
                 uci.applyIniFile();
                 uci.writeLineToEngine("ucinewgame");
@@ -869,6 +888,7 @@ public class DroidComputerPlayer {
     private int statTime = 0;
     private long statNodes = 0;
     private long statTBHits = 0;
+    private int statHash = 0;
     private int statNps = 0;
     private ArrayList<String> statPV = new ArrayList<String>();
     private String statCurrMove = "";
@@ -886,6 +906,7 @@ public class DroidComputerPlayer {
         statIsMate = statUpperBound = statLowerBound = false;
         statTime = 0;
         statNodes = statTBHits = 0;
+        statHash = 0;
         statNps = 0;
         depthModified = true;
         currMoveModified = true;
@@ -933,6 +954,9 @@ public class DroidComputerPlayer {
                 } else if (is.equals("tbhits")) {
                     statTBHits = Long.parseLong(tokens[i++]);
                     statsModified = true;
+                } else if (is.equals("hashfull")) {
+                    statHash = Integer.parseInt(tokens[i++]);
+                    statsModified = true;
                 } else if (is.equals("nps")) {
                     statNps = Integer.parseInt(tokens[i++]);
                     statsModified = true;
@@ -965,14 +989,15 @@ public class DroidComputerPlayer {
             }
             if (havePvData) {
                 while (statPvInfo.size() < pvNum)
-                    statPvInfo.add(new PvInfo(0, 0, 0, 0, 0, 0, false, false, false, new ArrayList<Move>()));
+                    statPvInfo.add(new PvInfo(0, 0, 0, 0, 0, 0, 0, false, false, false, new ArrayList<Move>()));
                 while (statPvInfo.size() <= pvNum)
                     statPvInfo.add(null);
                 ArrayList<Move> moves = new ArrayList<Move>();
                 int nMoves = statPV.size();
                 for (i = 0; i < nMoves; i++)
                     moves.add(TextIO.UCIstringToMove(statPV.get(i)));
-                statPvInfo.set(pvNum, new PvInfo(statPVDepth, statScore, statTime, statNodes, statNps, statTBHits,
+                statPvInfo.set(pvNum, new PvInfo(statPVDepth, statScore, statTime, statNodes, statNps,
+                                                 statTBHits, statHash,
                                                  statIsMate, statUpperBound, statLowerBound, moves));
             }
         } catch (NumberFormatException nfe) {
@@ -1017,49 +1042,9 @@ public class DroidComputerPlayer {
             pvModified = false;
         }
         if (statsModified) {
-            listener.notifyStats(id, statNodes, statNps, statTBHits, statTime);
+            listener.notifyStats(id, statNodes, statNps, statTBHits, statHash, statTime);
             statsModified = false;
         }
-    }
-
-    /** Try to find out how many CPU cores are present. */
-    private static final int getNumCPUs() {
-        int nCPUsFromProc = getNumCPUsFromProc();
-        int nCPUsFromSys = getNumCPUsFromSys();
-        int nCPUsFromOS = EngineUtil.getNPhysicalProcessors();
-        return Math.max(Math.max(nCPUsFromProc, nCPUsFromSys), nCPUsFromOS);
-    }
-
-    private static final int getNumCPUsFromProc() {
-        int nCPUsFromProc = 1;
-        try {
-            FileReader fr = new FileReader("/proc/stat");
-            BufferedReader inBuf = new BufferedReader(fr, 8192);
-            String line;
-            int nCPUs = 0;
-            while ((line = inBuf.readLine()) != null) {
-                if ((line.length() >= 4) && line.startsWith("cpu") && Character.isDigit(line.charAt(3)))
-                    nCPUs++;
-            }
-            inBuf.close();
-            if (nCPUs > 1)
-                nCPUsFromProc = nCPUs;
-        } catch (IOException e) {
-        }
-        return nCPUsFromProc;
-    }
-
-    private static final int getNumCPUsFromSys() {
-        File dir = new File("/sys/devices/system/cpu");
-        File[] files = dir.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return Pattern.matches("cpu[0-9]+", pathname.getName());
-            }
-        });
-        if (files == null)
-            return 1;
-        return Math.max(files.length, 1);
     }
 
     private final static void myAssert(boolean b) {

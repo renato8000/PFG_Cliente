@@ -42,7 +42,7 @@ public class GameTree {
     Position startPos;
     private String timeControl, whiteTimeControl, blackTimeControl;
 
-    // Non-standard tags (etiquetas)
+    // Non-standard tags
     static private final class TagPair {
         String tagName;
         String tagValue;
@@ -59,7 +59,7 @@ public class GameTree {
      * @param gameStateListener  Optional tree change listener.
      */
     public GameTree(PgnToken.PgnTokenReceiver gameStateListener) {
-        this.gameStateListener = gameStateListener;//token que recibe del contenido del .pgn
+        this.gameStateListener = gameStateListener;
         try {
             setStartPos(TextIO.readFEN(TextIO.startPosFEN));
         } catch (ChessParseError e) {
@@ -109,7 +109,7 @@ public class GameTree {
         private int prevType = PgnToken.EOF;
 
         final String getPgnString() {
-            StringBuilder ret = new StringBuilder(4096);//	qr 4296
+            StringBuilder ret = new StringBuilder(4096);
             ret.append(header);
             ret.append('\n');
 
@@ -380,7 +380,7 @@ public class GameTree {
             try {
                 while (true) {
                     char c = data.charAt(idx++);
-                    if (Character.isWhitespace(c)) {
+                    if (Character.isWhitespace(c) || c == '\u00a0') {
                         // Skip
                     } else if (c == '.') {
                         ret.type = PgnToken.PERIOD;

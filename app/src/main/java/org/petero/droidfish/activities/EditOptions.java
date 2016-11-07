@@ -25,7 +25,6 @@ import org.petero.droidfish.R;
 import org.petero.droidfish.Util;
 import org.petero.droidfish.engine.UCIOptions;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -49,11 +48,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-//import com.example.angie.droidfish10.R;
-
 /** Edit UCI options. */
 public class EditOptions extends Activity {
     private UCIOptions uciOpts = null;
+    private String engineName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +62,7 @@ public class EditOptions extends Activity {
 
         Intent i = getIntent();
         uciOpts = (UCIOptions)i.getSerializableExtra("org.petero.droidfish.ucioptions");
+        engineName = (String)i.getSerializableExtra("org.petero.droidfish.enginename");
         if (uciOpts != null) {
             initUI();
         } else {
@@ -87,17 +86,16 @@ public class EditOptions extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
-    @SuppressLint("CutPasteId")
     private final void initUI() {
-        setContentView(R.layout.editoptions);
-        Util.overrideFonts(findViewById(android.R.id.content));
+        String title = getString(R.string.edit_options_title);
+        if (engineName != null)
+            title = title + ": " + engineName;
+        setTitle(title);
 
-        LinearLayout content = (LinearLayout)findViewById(R.id.eo_content);
-        Button okButton = (Button)findViewById(R.id.eo_ok);
-        Button cancelButton = (Button)findViewById(R.id.eo_cancel);
-        Button resetButton = (Button)findViewById(R.id.eo_reset);
+        View view = View.inflate(this, R.layout.editoptions, null);
 
         if (uciOpts != null) {
+            LinearLayout content = (LinearLayout)view.findViewById(R.id.eo_content);
             for (String name : uciOpts.getOptionNames()) {
                 UCIOptions.OptionBase o = uciOpts.getOption(name);
                 if (!o.visible)
@@ -210,6 +208,12 @@ public class EditOptions extends Activity {
             }
         }
 
+        setContentView(view);
+        Util.overrideViewAttribs(findViewById(android.R.id.content));
+        Button okButton = (Button)findViewById(R.id.eo_ok);
+        Button cancelButton = (Button)findViewById(R.id.eo_cancel);
+        Button resetButton = (Button)findViewById(R.id.eo_reset);
+
         okButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -257,6 +261,8 @@ public class EditOptions extends Activity {
                                 modified = true;
                             break;
                         }
+                        case BUTTON:
+                            break;
                         }
                     }
                     if (modified)

@@ -33,8 +33,6 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.Toast;
 
-//import com.example.angie.droidfish10.R;
-
 /** Chess board widget suitable for play mode. */
 public class ChessBoardPlay extends ChessBoard {
     private PGNOptions pgnOptions = null;

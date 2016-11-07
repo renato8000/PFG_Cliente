@@ -39,7 +39,7 @@ public class Game {
     /** If true, add new moves as mainline moves. */
     private AddMoveBehavior addMoveBehavior;
 
-    PgnToken.PgnTokenReceiver gameTextListener;
+    private PgnToken.PgnTokenReceiver gameTextListener;
 
     public Game(PgnToken.PgnTokenReceiver gameTextListener, TimeControlData tcData) {
         this.gameTextListener = gameTextListener;
@@ -79,7 +79,7 @@ public class Game {
         ADD_LAST,
         /** Remove all variations not matching the new move. */
         REPLACE
-    };
+    }
 
     /** Set whether new moves are entered as mainline moves or variations. */
     public final void setAddFirst(AddMoveBehavior amb) {
@@ -140,7 +140,7 @@ public class Game {
             return false;
         if (str.startsWith("draw ")) {
             String drawCmd = str.substring(str.indexOf(" ") + 1);
-            handleDrawCmd(drawCmd);
+            handleDrawCmd(drawCmd, true);
             return true;
         } else if (str.equals("resign")) {
             addToGameTree(new Move(0, 0, 0), "resign");
@@ -160,14 +160,21 @@ public class Game {
         return true;
     }
 
+    /** Try claim a draw using a command string. Does not play the move involved
+     *  in the draw claim if the draw claim is invalid. */
+    public final void tryClaimDraw(String str) {
+        if (str.startsWith("draw ")) {
+            String drawCmd = str.substring(str.indexOf(" ") + 1);
+            handleDrawCmd(drawCmd, false);
+        }
+    }
+
     private final void addToGameTree(Move m, String playerAction) {
         if (m.equals(new Move(0, 0, 0))) { // Don't create more than one game-ending move at a node
             List<Move> varMoves = tree.variations();
-            for (int i = varMoves.size() - 1; i >= 0; i--) {
-                if (varMoves.get(i).equals(m)) {
+            for (int i = varMoves.size() - 1; i >= 0; i--)
+                if (varMoves.get(i).equals(m))
                     tree.deleteVariation(i);
-                }
-            }
         }
 
         boolean movePresent = false;
@@ -190,8 +197,16 @@ public class Game {
             }
             for (varNo = 0; varNo < nVars; varNo++) {
                 if (varMoves.get(varNo).equals(m)) {
-                    movePresent = true;
-                    break;
+                    boolean match = true;
+                    if (playerAction.isEmpty()) {
+                        tree.goForward(varNo, false);
+                        match = tree.getGameState() == GameState.ALIVE;
+                        tree.goBack();
+                    }
+                    if (match) {
+                        movePresent = true;
+                        break;
+                    }
                 }
             }
         }
@@ -440,7 +455,7 @@ public class Game {
         return new Pair<Position, ArrayList<Move>>(pos, mList);
     }
 
-    private final void handleDrawCmd(String drawCmd) {
+    private final void handleDrawCmd(String drawCmd, boolean playDrawMove) {
         Position pos = tree.currentPos;
         if (drawCmd.startsWith("rep") || drawCmd.startsWith("50")) {
             boolean rep = drawCmd.startsWith("rep");
@@ -493,7 +508,7 @@ public class Game {
                 addToGameTree(new Move(0, 0, 0), playerAction);
             } else {
                 pendingDrawOffer = true;
-                if (m != null) {
+                if (m != null && playDrawMove) {
                     processString(ms);
                 }
             }

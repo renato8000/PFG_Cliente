@@ -33,9 +33,6 @@ public class EngineUtil {
         System.loadLibrary("nativeutil");
     }
 
-    /** Return number of physical processors, i.e. hyper-threading ignored. */
-    final static native int getNPhysicalProcessors();
-
     /** Return file name of the internal stockfish executable. */
     public static String internalStockFishName() {
         String abi = Build.CPU_ABI;
@@ -109,6 +106,9 @@ public class EngineUtil {
 
     /** Executes chmod 744 exePath. */
     final static native boolean chmod(String exePath);
+
+    /** Change the priority of a process. */
+    final static native void reNice(int pid, int prio);
 
     /** For synchronizing non thread safe native calls. */
     public static Object nativeLock = new Object();

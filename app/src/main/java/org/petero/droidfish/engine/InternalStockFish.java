@@ -52,9 +52,7 @@ public class InternalStockFish extends ExternalEngine {
         if (!super.configurableOption(name))
             return false;
         if (name.equals("skill level") || name.equals("write debug log") ||
-            name.equals("write search log") || name.equals("search log filename") ||
-            name.equals("book file") || name.equals("best book move") ||
-            name.equals("ownbook"))
+            name.equals("write search log"))
             return false;
         return true;
     }
@@ -79,14 +77,14 @@ public class InternalStockFish extends ExternalEngine {
     }
 
     private final void writeCheckSum(File f, long checkSum) {
-        OutputStream os = null;
+        DataOutputStream dos = null;
         try {
-            os = new FileOutputStream(f);
-            DataOutputStream dos = new DataOutputStream(os);
+            OutputStream os = new FileOutputStream(f);
+            dos = new DataOutputStream(os);
             dos.writeLong(checkSum);
         } catch (IOException e) {
         } finally {
-            if (os != null) try { os.close(); } catch (IOException ex) {}
+            if (dos != null) try { dos.close(); } catch (IOException ex) {}
         }
     }
 

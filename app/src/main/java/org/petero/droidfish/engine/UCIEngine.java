@@ -40,7 +40,10 @@ public interface UCIEngine {
     public void applyIniFile();
 
     /** Set engine UCI options. */
-    public void setUCIOptions(Map<String,String> uciOptions);
+    public boolean setUCIOptions(Map<String,String> uciOptions);
+
+    /** Save non-default UCI option values to file. */
+    public void saveIniFile(UCIOptions options);
 
     /** Get engine UCI options. */
     public UCIOptions getUCIOptions();
@@ -85,7 +88,4 @@ public interface UCIEngine {
     /** Register an option as supported by the engine.
      * @param tokens  The UCI option line sent by the engine, split in words. */
     public UCIOptions.OptionBase registerOption(String[] tokens);
-
-    /** Set number of search threads to use. */
-    public void setNThreads(int nThreads);
 }

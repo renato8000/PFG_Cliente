@@ -33,8 +33,6 @@ import org.petero.droidfish.gamelogic.TextIO;
 import org.petero.droidfish.gamelogic.UndoInfo;
 
 import android.annotation.SuppressLint;
-//import android.util.FloatMath;
-import java.lang.Math;;
 
 @SuppressLint("UseSparseArrays")
 final class InternalBook implements IOpeningBook {
@@ -70,8 +68,7 @@ final class InternalBook implements IOpeningBook {
         ArrayList<BookEntry> ret = new ArrayList<BookEntry>();
         for (BookEntry be : ents) {
             BookEntry be2 = new BookEntry(be.move);
-            double d = be.weight; 
-            be2.weight = (float) (Math.sqrt(d) * 100 + 1);
+            be2.weight = (float)(Math.sqrt(be.weight) * 100 + 1);
             ret.add(be2);
         }
         return ret;
@@ -88,7 +85,7 @@ final class InternalBook implements IOpeningBook {
         bookMap = new HashMap<Long, ArrayList<BookEntry>>();
         numBookMoves = 0;
         try {
-            InputStream inStream = getClass().getResourceAsStream("raw/book.bin");
+            InputStream inStream = getClass().getClassLoader().getResourceAsStream("assets/book.bin");
             if (inStream == null)
                 throw new IOException();
             List<Byte> buf = new ArrayList<Byte>(8192);
@@ -122,11 +119,9 @@ final class InternalBook implements IOpeningBook {
             }
         } catch (ChessParseError ex) {
             throw new RuntimeException();
-        } /*catch (IOException ex) {
+        } catch (IOException ex) {
             System.out.println("Can't read opening book resource");
             throw new RuntimeException();
-        }*/ catch (IOException e) {
-            e.printStackTrace();
         }
 /*        {
             long t1 = System.currentTimeMillis();
@@ -134,8 +129,6 @@ final class InternalBook implements IOpeningBook {
                     (t1 - t0) / 1000.0);
         } */
     }
-
-
 
 
     /** Add a move to a position in the opening book. */

@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DroidfishTFG</string>
-    <string name="engine_threads_default">1</string>
+    <string name="app_name">DroidFish</string>
     <string name="engine_hash_default">16</string>
     <string name="moves_per_session_default">60</string>
     <string name="time_control_default">120000</string>
@@ -23,99 +23,6 @@ If you are running on battery power, it is recommended that you change settings 
 conserve battery power, or that you exit <i>DroidFish</i> using the back button when \
 you are not actively using the program.\
     </string>
-    <string name="msg_default_format">Format</string>
-    <string name="msg_default_type">Type</string>
-    <string name="msg_default_time">Time</string>
-    <string name="msg_default_meta">Metadata</string>
-    <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
-    <string name="button_google_shopper">Shopper</string>
-    <string name="menu_help">Help</string>
-    <string name="menu_history">History</string>
-    <string name="menu_settings">Settings</string>
-    <string name="menu_share">Share</string>
-    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
-    <string name="button_ok">OK</string>
-    <string name="button_done">Done</string>
-    <string name="button_back">Back</string>
-    <string name="button_search_book_contents">Search contents</string>
-    <string name="sbc_name">Google Book Search</string>
-    <string name="msg_sbc_book_not_searchable">Sorry, this book is not searchable.</string>
-    <string name="msg_sbc_searching_book">Searching book\u2026</string>
-    <string name="msg_sbc_no_page_returned">No page returned</string>
-    <string name="msg_sbc_page">Page</string>
-    <string name="msg_sbc_results">Results</string>
-    <string name="msg_sbc_snippet_unavailable">Snippet not available</string>
-    <string name="msg_sbc_unknown_page">Unknown page</string>
-    <string name="msg_sbc_failed">Sorry, the search encountered a problem.</string>
-    <string name="menu_encode_vcard">Use vCard</string>
-    <string name="menu_encode_mecard">Use MECARD</string>
-    <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
-    <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
-    <string name="contents_text">Plain text</string>
-    <string name="contents_email">Email address</string>
-    <string name="contents_location">Geographic coordinates</string>
-    <string name="contents_phone">Phone number</string>
-    <string name="contents_sms">SMS address</string>
-    <string name="contents_contact">Contact info</string>
-    <string name="history_clear_one_history_text">Clear</string>
-    <string name="history_email_title">Barcode Scanner history</string>
-    <string name="msg_sure">Are you sure?</string>
-    <string name="button_cancel">Cancel</string>
-    <string name="history_clear_text">Clear history</string>
-    <string name="history_send">Send history</string>
-    <string name="history_empty">Empty</string>
-    <string name="history_empty_detail">No barcode scans have been recorded</string>
-    <string name="button_add_contact">Add contact</string>
-    <string name="button_show_map">Show map</string>
-    <string name="button_dial">Dial number</string>
-    <string name="button_email">Send email</string>
-    <string name="result_address_book">Found contact info</string>
-    <string name="button_add_calendar">Add to calendar</string>
-    <string name="result_calendar">Found calendar event</string>
-    <string name="result_email_address">Found email address</string>
-    <string name="result_geo">Found geographic coordinates</string>
-    <string name="button_get_directions">Get directions</string>
-    <string name="button_product_search">Product Search</string>
-    <string name="button_book_search">Book Search</string>
-    <string name="button_custom_product_search">Custom search</string>
-    <string name="result_isbn">Found book</string>
-    <string name="result_product">Found product</string>
-    <string name="button_web_search">Web search</string>
-    <string name="msg_share_subject_line">Here are the contents of a barcode I scanned</string>
-    <string name="msg_default_mms_subject">Hi</string>
-    <string name="msg_google_shopper_missing">Google Shopper is not installed</string>
-    <string name="msg_install_google_shopper">Google Shopper combines barcode scanning with online and local prices, reviews and more without opening the browser. Would you like to try it?</string>
-    <string name="msg_intent_failed">Sorry, the requested application could not be launched. The barcode contents may be invalid.</string>
-    <string name="button_sms">Send SMS</string>
-    <string name="button_mms">Send MMS</string>
-    <string name="result_sms">Found SMS address</string>
-    <string name="result_tel">Found phone number</string>
-    <string name="result_text">Found plain text</string>
-    <string name="button_share_by_email">Share via email</string>
-    <string name="button_share_by_sms">Share via SMS</string>
-    <string name="button_open_browser">Open browser</string>
-    <string name="result_uri">Found URL</string>
-    <string name="button_wifi">Connect to Network</string>
-    <string name="wifi_changing_network">Requesting connection to network\u2026</string>
-    <string name="wifi_ssid_label">Network Name</string>
-    <string name="wifi_type_label">Type</string>
-    <string name="result_wifi">Found WLAN Configuration</string>
-    <string name="msg_google_books">Google Books</string>
-    <string name="msg_google_product">Google Product Search</string>
-    <string name="msg_redirect">Redirect</string>
-    <string name="msg_share_explanation">You can share data by displaying a barcode on your screen and scanning it with another phone.</string>
-    <string name="button_share_app">Application</string>
-    <string name="button_share_bookmark">Bookmark</string>
-    <string name="button_share_clipboard">Clipboard</string>
-    <string name="button_share_contact">Contact</string>
-    <string name="msg_share_text">Or type some text and press Enter</string>
-    <string name="preferences_name">Settings</string>
-    <string name="history_title">History</string>
-    <string name="bookmark_picker_name">Bookmarks</string>
-    <string name="app_picker_name">Applications</string>
-
-
-
     <string name="offer_draw">Offer Draw</string>
     <string name="queen">Queen</string>
     <string name="rook">Rook</string>
@@ -130,11 +37,9 @@ you are not actively using the program.\
     <string name="share_pgn_game">Share PGN game</string>
     <string name="load_last_file">Load from last file</string>
     <string name="load_game">Load game from PGN file</string>
-    <string name="load_qr">Load game from QR file</string>
     <string name="load_position">Load position from file</string>
     <string name="load_scid_game">Load game from Scid file</string>
     <string name="save_game">Save game to PGN file</string>
-    <string name="save_qr">Save game to QR file</string>
     <string name="get_fen">Retrieve Position</string>
     <string name="truncate_gametree">Truncate Game Tree</string>
     <string name="move_var_up">Move Variation Up</string>
@@ -170,26 +75,18 @@ you are not actively using the program.\
     <string name="select_opening_book_file">Select opening book file</string>
     <string name="select_chess_engine">Select Chess Engine</string>
     <string name="select_pgn_file">Open PGN file</string>
-    <string name="select_qr_file">Open QR file</string>
     <string name="select_pgn_file_save">Save to PGN file</string>
-    <string name="select_qr_file_save">Save to QR file</string>
     <string name="select_fen_file">Open FEN/EPD file</string>
     <string name="pgn_load">Load</string>
-    <string name="qr_load">Load</string>
     <string name="pgn_save">Save</string>
-    <string name="qr_save">Save</string>
     <string name="reading_pgn_file">Reading PGN file…</string>
     <string name="reading_fen_file">Reading FEN/EPD file…</string>
     <string name="reading_scid_file">Reading Scid file…</string>
     <string name="new_file">&lt;New File&gt;</string>
     <string name="new_engine">&lt;New Engine&gt;</string>
     <string name="no_pgn_files">No files found in directory DroidFish/pgn on the SD card</string>
-    <string name="no_qr_files">No files found in directory DroidFish/qr on the SD card</string>
     <string name="no_fen_files">No files found in directory DroidFish/epd on the SD card</string>
     <string name="select_color_theme">Select Color Theme</string>
-    <string name="option_qr_load">Select Mode Qr Load</string>
-    <string name="select_camera">Open Camera</string>
-    <string name="select_gallery">Open Gallery</string>
     <string name="colortheme_original">Original</string>
     <string name="colortheme_xboard">XBoard</string>
     <string name="colortheme_blue">Blue</string>
@@ -234,6 +131,7 @@ you are not actively using the program.\
     <string name="toggle_analysis">Toggle Engine Analysis</string>
     <string name="toggle_large_buttons">Toggle Large Buttons</string>
     <string name="toggle_blind_mode">Toggle Blindfold Mode</string>
+    <string name="toggle_arrows">Toggle Arrows</string>
     <string name="cancel">Cancel</string>
     <string name="reset">Reset</string>
     <string name="yes">Yes</string>
@@ -308,6 +206,7 @@ you are not actively using the program.\
     <string name="stockfish_engine">Stockfish</string>
     <string name="cuckoochess_engine">CuckooChess</string>
     <string name="select_engine">Select Engine</string>
+    <string name="engine_options">Engine Options</string>
     <string name="set_engine_options">Set options</string>
     <string name="configure_network_engine">Configure Network Engine</string>
     <string name="create_network_engine">Create Network Engine</string>
@@ -345,7 +244,6 @@ you are not actively using the program.\
     <string name="option_resign_game">Resign game</string>
     <string name="option_edit_board">Edit Board</string>
     <string name="option_settings">Settings</string>
-    <string name="option_goto_move">Goto Move</string>
     <string name="option_force_computer_move">Force Computer Move</string>
     <string name="option_draw">Claim/Offer/Accept Draw</string>
     <string name="option_select_book">Select Opening Book</string>
@@ -364,8 +262,6 @@ you are not actively using the program.\
     <string name="prefs_strength_summary">Only supported by internal engines. Analysis mode always uses full strength.</string>
     <string name="prefs_ponderMode_title">Pondering</string>
     <string name="prefs_ponderMode_summary">Let engine think while waiting for opponent\'s move. Supported by most engines.</string>
-    <string name="prefs_threads_title">Threads</string>
-    <string name="prefs_threads_summary">Number of engine threads (CPU cores) to use. Not supported by all engines.</string>
     <string name="prefs_hash_title">Hash Table</string>
     <string name="prefs_hash_summary">Hash table size in megabytes</string>
     <string name="prefs_time_control">Time Control</string>
@@ -431,7 +327,7 @@ you are not actively using the program.\
     <string name="prefs_custom_button_3">Custom Button 3</string>
     <string name="prefs_colors_title">Color Settings</string>
     <!-- Color Picker -->
-    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>    
     <!--  End color Picker -->
     <string name="prefs_colors_summary">Change individual colors</string>
     <string name="prefs_chess_board">Chess Board</string>
@@ -447,6 +343,8 @@ you are not actively using the program.\
     <string name="prefs_color_arrow3_title">Arrow 4</string>
     <string name="prefs_color_arrow4_title">Arrow 5</string>
     <string name="prefs_color_arrow5_title">Arrow 6</string>
+    <string name="prefs_color_arrow6_title">Arrow 7</string>
+    <string name="prefs_color_arrow7_title">Arrow 8</string>
     <string name="prefs_color_squareLabel_title">Square Labels</string>
     <string name="prefs_color_decoration_title">Tablebase hints</string>
     <string name="prefs_move_list">Move List</string>
@@ -518,32 +416,26 @@ you are not actively using the program.\
     <string name="prefs_rtbPath_summary">Directory where Syzygy tablebases are installed. Leave blank to use default directory</string>
     <string name="prefs_rtbPathNet_title">Syzygy Network Directory</string>
     <string name="prefs_rtbPathNet_summary">Directory for network engines where Syzygy tablebases are installed.</string>
+    <string name="prefs_guideShowOnStart_title">Startup Guide</string>
+    <string name="prefs_guideShowOnStart_summary">Show the startup guide the next time the program is started.</string>
+    <string name="tour_leftMenu_title">Left Menu</string>
+    <string name="tour_leftMenu_desc">To open the left menu, tap on the left side of the title bar or swipe from the left side of the screen towards the right side.</string>
+    <string name="tour_rightMenu_title">Right Menu</string>
+    <string name="tour_rightMenu_desc">To open the right menu, tap on the right side of the title bar or swipe from the right side of the screen towards the left side.</string>
+    <string name="tour_chessBoard_title">Chess Board</string>
+    <string name="tour_chessBoard_desc">Touch and hold the chess board to open the tools menu.</string>
+    <string name="tour_buttons_title">Buttons</string>
+    <string name="tour_buttons_desc">Tap a button to invoke its action. Touch and hold a button to open a menu containing secondary actions. To configure button actions go to Left Menu &gt; Settings &gt; Behavior &gt; Configure Buttons.</string>
+    <string name="tour_moveList_title">Move List</string>
+    <string name="tour_moveList_desc">Tap a move in the move list to set the chess board to the corresponding position. Touch and hold the move list to open the Edit Game menu.</string>
+    <string name="tour_analysis_title">Analysis information</string>
+    <string name="tour_analysis_desc">When the engine is thinking, touch and hold the analysis information to open the Analysis menu.</string>
     <string name="buttonDesc_custom1">@string/prefs_custom_button_1</string>
     <string name="buttonDesc_custom2">@string/prefs_custom_button_2</string>
     <string name="buttonDesc_custom3">@string/prefs_custom_button_3</string>
     <string name="buttonDesc_mode">Mode button</string>
     <string name="buttonDesc_back">Backward button</string>
     <string name="buttonDesc_forward">Forward button</string>
-    <string-array name="engine_threads_texts">
-        <item>Automatic</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>6</item>
-        <item>8</item>
-        <item>16</item>
-    </string-array>
-    <string-array name="engine_threads_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>6</item>
-        <item>8</item>
-        <item>16</item>
-    </string-array>
     <string-array name="viewPieceType_texts">
         <item>English letters</item>
         <item>Local language letters</item>
@@ -706,6 +598,8 @@ you are not actively using the program.\
         <item>Max 4 Arrows</item>
         <item>Max 5 Arrows</item>
         <item>Max 6 Arrows</item>
+        <item>Max 7 Arrows</item>
+        <item>Max 8 Arrows</item>
     </string-array>
     <string-array name="thinking_arrows_values">
         <item>0</item>
@@ -715,6 +609,8 @@ you are not actively using the program.\
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
+        <item>8</item>
     </string-array>
     <string-array name="scroll_sensitivity_texts">
         <item>Off</item>
@@ -761,9 +657,11 @@ you are not actively using the program.\
         <item>@string/toggle_pgn_headers</item>
         <item>@string/toggle_large_buttons</item>
         <item>@string/toggle_blind_mode</item>
+        <item>@string/toggle_arrows</item>
         <item>@string/load_last_file</item>
         <item>@string/select_engine</item>
-    </string-array>
+        <item>@string/engine_options</item>
+        </string-array>
     <string-array name="button_action_values">
         <item></item>
         <item>flipboard</item>
@@ -775,7 +673,9 @@ you are not actively using the program.\
         <item>viewHeaders</item>
         <item>largeButtons</item>
         <item>blindMode</item>
+        <item>toggleArrows</item>
         <item>loadLastFile</item>
         <item>selectEngine</item>
+        <item>engineOptions</item>
     </string-array>
 </resources>

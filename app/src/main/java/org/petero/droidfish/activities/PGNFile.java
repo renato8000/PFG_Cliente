@@ -32,8 +32,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.widget.Toast;
 
-//import com.example.angie.droidfish10.R;
-
 public class PGNFile {
     private final File fileName;
 

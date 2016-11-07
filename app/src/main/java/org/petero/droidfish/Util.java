@@ -13,6 +13,7 @@ import org.petero.droidfish.gamelogic.Position;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public final class Util {
     static {
         // Using bold face causes crashes in android 4.1, see:
         // http://code.google.com/p/android/issues/detail?id=34872
-        final int sdkVersion = Integer.parseInt(Build.VERSION.SDK);
+        final int sdkVersion = Build.VERSION.SDK_INT;
         if (sdkVersion == 16) {
             boldStart = "";
             boldStop = "";
@@ -115,27 +116,39 @@ public final class Util {
     }
 
     /** Change foreground/background color in a view. */
-    public static void overrideFonts(final View v) {
+    public static void overrideViewAttribs(final View v) {
         if (v == null)
             return;
         final int bg = ColorTheme.instance().getColor(ColorTheme.GENERAL_BACKGROUND);
+        Object tag = v.getTag();
         final boolean excludedItems = v instanceof Button ||
-                                      v instanceof EditText ||
+                                      ((v instanceof EditText) && !(v instanceof MoveListView)) ||
                                       v instanceof ImageButton ||
-                                      "title".equals(v.getTag());
-        if (!excludedItems)
-            v.setBackgroundColor(bg);
+                                      "title".equals(tag);
+        if (!excludedItems) {
+            int c = bg;
+            if ("thinking".equals(tag)) {
+                float[] hsv = new float[3];
+                Color.colorToHSV(c, hsv);
+                hsv[2] += hsv[2] > 0.5f ? -0.1f : 0.1f;
+                c = Color.HSVToColor(Color.alpha(c), hsv);
+            }
+            v.setBackgroundColor(c);
+        }
         if (v instanceof ListView)
             ((ListView) v).setCacheColorHint(bg);
         if (v instanceof ViewGroup) {
             ViewGroup vg = (ViewGroup) v;
             for (int i = 0; i < vg.getChildCount(); i++) {
                 View child = vg.getChildAt(i);
-                overrideFonts(child);
+                overrideViewAttribs(child);
             }
-        } else if ((v instanceof TextView) && !excludedItems) {
+        } else if (!excludedItems && (v instanceof TextView)) {
             int fg = ColorTheme.instance().getColor(ColorTheme.FONT_FOREGROUND);
             ((TextView) v).setTextColor(fg);
+        } else if (!excludedItems && (v instanceof MoveListView)) {
+            int fg = ColorTheme.instance().getColor(ColorTheme.FONT_FOREGROUND);
+            ((MoveListView) v).setTextColor(fg);
         }
     }
 }

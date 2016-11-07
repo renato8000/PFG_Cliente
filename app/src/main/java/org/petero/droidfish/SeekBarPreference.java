@@ -20,8 +20,6 @@ package org.petero.droidfish;
 
 import java.util.Locale;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -29,7 +27,6 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
@@ -46,14 +43,9 @@ import android.widget.TextView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Toast;
 
-//import com.example.angie.droidfish10.R;
-
-//import com.example.angie.droidfish10.R;
-
 /** Lets user enter a percentage value using a seek bar. */
 public class SeekBarPreference extends Preference
-    implements OnSeekBarChangeListener{
-
+                               implements OnSeekBarChangeListener {
     private final static int maxValue = 1000;
     private final static int DEFAULT_VALUE = 1000;
     private int currVal = DEFAULT_VALUE;
@@ -70,8 +62,6 @@ public class SeekBarPreference extends Preference
         super(context, attrs, defStyle);
     }
 
-
-    @SuppressLint("MissingSuperCall")
     @Override
     protected View onCreateView(ViewGroup parent) {
         TextView name = new TextView(getContext());
@@ -104,7 +94,7 @@ public class SeekBarPreference extends Preference
         bar.setMax(maxValue);
         bar.setProgress(currVal);
         bar.setOnSeekBarChangeListener(this);
-        lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT,
+        lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                                            LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.gravity = Gravity.RIGHT;
         bar.setLayoutParams(lp);

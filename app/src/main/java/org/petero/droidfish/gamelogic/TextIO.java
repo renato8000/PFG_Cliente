@@ -18,8 +18,6 @@
 
 package org.petero.droidfish.gamelogic;
 
-//import com.example.angie.droidfish10.R;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -47,16 +45,14 @@ public class TextIO {
 
     /** Parse a FEN string and return a chess Position object. */
     public static final Position readFEN(String fen) throws ChessParseError {
-    	//lee el FEN (informacion sobre una posicion especfica)
-        fen = fen.trim();//devuelve el string con el espacio final e inicial omitidos
-        Position pos = new Position();//se crea el objeto posicion para retornar
-        String[] words = fen.split(" ");//se separa las palabras con el separador "espacio"
+        fen = fen.trim();
+        Position pos = new Position();
+        String[] words = fen.split(" ");
         if (words.length < 2) {
             throw new ChessParseError(R.string.err_too_few_spaces);
-            //demasiado peque
         }
         for (int i = 0; i < words.length; i++) {
-            words[i] = words[i].trim();//"se limpia los string"(se omiten espacio final e inicial)
+            words[i] = words[i].trim();
         }
 
         // Piece placement
@@ -134,10 +130,21 @@ public class TextIO {
             // En passant target square
             String epString = words[3];
             if (!epString.equals("-")) {
-                if (epString.length() < 2) {
+                if (epString.length() < 2)
                     throw new ChessParseError(R.string.err_invalid_en_passant_square, pos);
+                int epSq = getSquare(epString);
+                if (epSq != -1) {
+                    if (pos.whiteMove) {
+                        if ((Position.getY(epSq) != 5) || (pos.getPiece(epSq) != Piece.EMPTY) ||
+                                (pos.getPiece(epSq - 8) != Piece.BPAWN))
+                            epSq = -1;
+                    } else {
+                        if ((Position.getY(epSq) != 2) || (pos.getPiece(epSq) != Piece.EMPTY) ||
+                                (pos.getPiece(epSq + 8) != Piece.WPAWN))
+                            epSq = -1;
+                    }
+                    pos.setEpSquare(epSq);
                 }
-                pos.setEpSquare(getSquare(epString));
             }
         }
 
@@ -450,9 +457,9 @@ public class TextIO {
 
     /**
      * Decide if move is valid in position pos.
-     * @para pos   Position for which to test move.
-     * @para move  The move to check for validity.
-     * @para moves If non-null, list of valid moves in position pos.
+     * @param pos   Position for which to test move.
+     * @param move  The move to check for validity.
+     * @param moves If non-null, list of valid moves in position pos.
      * @return True if move is valid in position pos, false otherwise.
      */
     public static final boolean isValid(Position pos, Move move) {

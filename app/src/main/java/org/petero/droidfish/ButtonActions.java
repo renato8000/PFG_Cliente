@@ -27,8 +27,6 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.ImageButton;
 
-//import com.example.angie.droidfish10.R;
-
 /**
  * Handle all actions connected to a button.
  */
@@ -88,7 +86,7 @@ public class ButtonActions {
         for (UIAction a : menuActions) {
             if (a != null) {
                 haveActions = true;
-                if  (a.enabled())
+                if (a.enabled())
                     haveEnabledActions = true;
             }
         }

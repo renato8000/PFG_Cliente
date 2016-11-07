@@ -31,8 +31,6 @@ import org.petero.droidfish.EngineOptions;
 import org.petero.droidfish.R;
 import android.content.Context;
 
-//import com.example.angie.droidfish10.R;
-
 /** Engine running as a process started from an external resource. */
 public class ExternalEngine extends UCIEngineBase {
     protected final Context context;
@@ -79,6 +77,7 @@ public class ExternalEngine extends UCIEngineBase {
             synchronized (EngineUtil.nativeLock) {
                 engineProc = pb.start();
             }
+            reNice();
 
             startupThread = new Thread(new Runnable() {
                 @Override
@@ -170,6 +169,17 @@ public class ExternalEngine extends UCIEngineBase {
         }
     }
 
+    /** Try to lower the engine process priority. */
+    private void reNice() {
+        try {
+            java.lang.reflect.Field f = engineProc.getClass().getDeclaredField("pid");
+            f.setAccessible(true);
+            int pid = f.getInt(engineProc);
+            EngineUtil.reNice(pid, 10);
+        } catch (Throwable t) {
+        }
+    }
+
     /** Remove all files except exePath from exeDir. */
     private void cleanUpExeDir(File exeDir, String exePath) {
         try {
@@ -195,7 +205,7 @@ public class ExternalEngine extends UCIEngineBase {
     @Override
     public void initOptions(EngineOptions engineOptions) {
         super.initOptions(engineOptions);
-        hashMB = getHashMB(engineOptions.hashMB);
+        hashMB = getHashMB(engineOptions);
         setOption("Hash", hashMB);
         syzygyPath = engineOptions.getEngineRtbPath(false);
         setOption("SyzygyPath", syzygyPath);
@@ -210,8 +220,9 @@ public class ExternalEngine extends UCIEngineBase {
     }
 
     /** Reduce too large hash sizes. */
-    private final int getHashMB(int hashMB) {
-        if (hashMB > 16) {
+    private final static int getHashMB(EngineOptions engineOptions) {
+        int hashMB = engineOptions.hashMB;
+        if (hashMB > 16 && !engineOptions.unSafeHash) {
             int maxMem = (int)(Runtime.getRuntime().maxMemory() / (1024*1024));
             if (maxMem < 16)
                 maxMem = 16;
@@ -226,7 +237,7 @@ public class ExternalEngine extends UCIEngineBase {
     public boolean optionsOk(EngineOptions engineOptions) {
         if (!optionsInitialized)
             return true;
-        if (hashMB != getHashMB(engineOptions.hashMB))
+        if (hashMB != getHashMB(engineOptions))
             return false;
         if (hasOption("gaviotatbpath") && !gaviotaTbPath.equals(engineOptions.getEngineGtbPath(false)))
             return false;
@@ -259,8 +270,10 @@ public class ExternalEngine extends UCIEngineBase {
         data += "\n";
         try {
             Process ep = engineProc;
-            if (ep != null)
+            if (ep != null) {
                 ep.getOutputStream().write(data.getBytes());
+                ep.getOutputStream().flush();
+            }
         } catch (IOException e) {
         }
     }
@@ -290,17 +303,19 @@ public class ExternalEngine extends UCIEngineBase {
         if (to.exists())
             to.delete();
         to.createNewFile();
-        FileChannel inFC = null;
-        FileChannel outFC = null;
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
         try {
-            inFC = new FileInputStream(from).getChannel();
-            outFC = new FileOutputStream(to).getChannel();
+            fis = new FileInputStream(from);
+            FileChannel inFC = fis.getChannel();
+            fos = new FileOutputStream(to);
+            FileChannel outFC = fos.getChannel();
             long cnt = outFC.transferFrom(inFC, 0, inFC.size());
             if (cnt < inFC.size())
                 throw new IOException("File copy failed");
         } finally {
-            if (inFC != null) { try { inFC.close(); } catch (IOException ex) {} }
-            if (outFC != null) { try { outFC.close(); } catch (IOException ex) {} }
+            if (fis != null) { try { fis.close(); } catch (IOException ex) {} }
+            if (fos != null) { try { fos.close(); } catch (IOException ex) {} }
             to.setLastModified(from.lastModified());
         }
         return to.getAbsolutePath();

@@ -23,12 +23,12 @@ public class PgnToken {
     // These are tokens according to the PGN spec
     public static final int STRING = 0;
     public static final int INTEGER = 1;
-    public static final int PERIOD = 2;//.
-    public static final int ASTERISK = 3;//*
-    public static final int LEFT_BRACKET = 4;//[
-    public static final int RIGHT_BRACKET = 5;//]
-    public static final int LEFT_PAREN = 6;//(
-    public static final int RIGHT_PAREN = 7;//)
+    public static final int PERIOD = 2;
+    public static final int ASTERISK = 3;
+    public static final int LEFT_BRACKET = 4;
+    public static final int RIGHT_BRACKET = 5;
+    public static final int LEFT_PAREN = 6;
+    public static final int RIGHT_PAREN = 7;
     public static final int NAG = 8;
     public static final int SYMBOL = 9;
 
@@ -59,5 +59,5 @@ public class PgnToken {
 
         /** Change current move number. */
         public void setCurrent(GameTree.Node node);
-    };
+    }
 }

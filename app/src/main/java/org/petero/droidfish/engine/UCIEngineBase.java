@@ -35,7 +35,7 @@ import android.content.Context;
 public abstract class UCIEngineBase implements UCIEngine {
 
     private boolean processAlive;
-    UCIOptions options;
+    private UCIOptions options;
     protected boolean isUCI;
 
     public static UCIEngine getEngine(Context context, String engine,
@@ -99,7 +99,7 @@ public abstract class UCIEngineBase implements UCIEngine {
     }
 
     @Override
-    public final void setUCIOptions(Map<String,String> uciOptions) {
+    public final boolean setUCIOptions(Map<String,String> uciOptions) {
         boolean modified = false;
         for (Map.Entry<String,String> ent : uciOptions.entrySet()) {
             String key = ((String)ent.getKey()).toLowerCase(Locale.US);
@@ -107,23 +107,26 @@ public abstract class UCIEngineBase implements UCIEngine {
             if (configurableOption(key))
                 modified |= setOption(key, value);
         }
-        if (modified) { // Save .ini file
-            Properties iniOptions = new Properties();
-            for (String name : options.getOptionNames()) {
-                UCIOptions.OptionBase o = options.getOption(name);
-                if (configurableOption(name) && o.modified())
-                    iniOptions.put(o.name, o.getStringValue());
-            }
-            File optionsFile = getOptionsFile();
-            FileOutputStream os = null;
-            try {
-                os = new FileOutputStream(optionsFile);
-                iniOptions.store(os, null);
-            } catch (IOException ex) {
-            } finally {
-                if (os != null)
-                    try { os.close(); } catch (IOException ex) {}
-            }
+        return modified;
+    }
+
+    @Override
+    public final void saveIniFile(UCIOptions options) {
+        Properties iniOptions = new Properties();
+        for (String name : options.getOptionNames()) {
+            UCIOptions.OptionBase o = options.getOption(name);
+            if (configurableOption(name) && o.modified())
+                iniOptions.put(o.name, o.getStringValue());
+        }
+        File optionsFile = getOptionsFile();
+        FileOutputStream os = null;
+        try {
+            os = new FileOutputStream(optionsFile);
+            iniOptions.store(os, null);
+        } catch (IOException ex) {
+        } finally {
+            if (os != null)
+                try { os.close(); } catch (IOException ex) {}
         }
     }
 
@@ -140,7 +143,7 @@ public abstract class UCIEngineBase implements UCIEngine {
         name = name.toLowerCase(Locale.US);
         if (name.startsWith("uci_") || name.equals("hash") || name.equals("ponder") ||
             name.equals("multipv") || name.equals("gaviotatbpath") ||
-            name.equals("syzygypath") || name.equals("threads") || name.equals("cores"))
+            name.equals("syzygypath"))
             return false;
         return true;
     }
@@ -284,13 +287,5 @@ public abstract class UCIEngineBase implements UCIEngine {
             return true;
         }
         return false;
-    }
-
-    @Override
-    public final void setNThreads(int nThreads) {
-        if (options.contains("Threads"))
-            setOption("Threads", nThreads);
-        else if (options.contains("Cores"))
-            setOption("Cores", nThreads);
     }
 }

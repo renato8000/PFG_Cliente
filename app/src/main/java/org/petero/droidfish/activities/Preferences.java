@@ -24,17 +24,25 @@ import org.petero.droidfish.Util;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
-//import com.example.angie.droidfish10.R;
-
 public class Preferences extends PreferenceActivity {
+
+    public static class Fragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.preferences);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.preferences);
-
+        getFragmentManager().beginTransaction()
+                            .replace(android.R.id.content, new Fragment())
+                            .commit();
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         Util.setFullScreenMode(this, settings);
     }

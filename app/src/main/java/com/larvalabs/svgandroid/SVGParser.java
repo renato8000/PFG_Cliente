@@ -3,7 +3,6 @@ package com.larvalabs.svgandroid;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.*;
-//import android.util.FloatMath;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
@@ -18,8 +17,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.lang.Math;
-
 
 /*
 
@@ -53,7 +50,6 @@ import java.lang.Math;
  * @see #getSVGFromInputStream(java.io.InputStream)
  * @see #parsePath(String)
  */
-@SuppressWarnings("deprecation")
 public class SVGParser {
 
     static final String TAG = "SVGAndroid";
@@ -996,7 +992,6 @@ public class SVGParser {
             canvas.restore();
         }
 
-        
         @Override
         public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
             // Reset paint opacity
