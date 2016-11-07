@@ -183,10 +183,8 @@ void Search::init() {
           for (int mc = 1; mc < 64; ++mc)
           {
               double r = log(d) * log(mc) / 2;
-              if (r < 0.80)
-                continue;
 
-              Reductions[NonPV][imp][d][mc] = int(round(r));
+              Reductions[NonPV][imp][d][mc] = int(std::round(r));
               Reductions[PV][imp][d][mc] = std::max(Reductions[NonPV][imp][d][mc] - 1, 0);
 
               // Increase reduction for non-PV nodes when eval is not improving
@@ -214,6 +212,7 @@ void Search::clear() {
       th->counterMoves.clear();
       th->fromTo.clear();
       th->counterMoveHistory.clear();
+      th->resetCalls = true;
   }
 
   Threads.main()->previousScore = VALUE_INFINITE;
@@ -664,9 +663,10 @@ namespace {
             &&  pos.rule50_count() == 0
             && !pos.can_castle(ANY_CASTLING))
         {
-            int found, v = Tablebases::probe_wdl(pos, &found);
+            TB::ProbeState err;
+            TB::WDLScore v = Tablebases::probe_wdl(pos, &err);
 
-            if (found)
+            if (err != TB::ProbeState::FAIL)
             {
                 thisThread->tbHits++;
 
