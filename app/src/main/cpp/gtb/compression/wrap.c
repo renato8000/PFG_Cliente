@@ -29,7 +29,6 @@ Copyright (c) 2010 Miguel A. Ballicora
 */
 
 #include "wrap.h"
-#include "zconf.h"
 
 #define LZMA86 
 #define ZLIB
@@ -43,7 +42,7 @@ Copyright (c) 2010 Miguel A. Ballicora
 #endif
 
 #if defined(ZLIB)
-#include <zlib/zlib.h>
+#include "zlib.h"
 #endif
 
 #if defined(HUFFMAN)

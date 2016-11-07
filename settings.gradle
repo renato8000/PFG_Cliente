@@ -1,1 +1,1 @@
-include ':app', ':cuckoochessengine', ':cuckoochess',':cuckoochessapk'
+include ':app',':cuckoochessengine'

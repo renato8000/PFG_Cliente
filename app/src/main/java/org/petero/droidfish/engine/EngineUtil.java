@@ -49,7 +49,7 @@ public class EngineUtil {
         } else {
             abi = "armeabi"; // Unknown ABI, assume original ARM
         }
-        return "stockfish-" + abi + (noPIE ? "-nopie" : "");
+        return "engine/"+abi+"/stockfish";
     }
 
     /** Return true if file "engine" is a network engine. */
