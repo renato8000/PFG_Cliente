@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DroidFishTFG.iml" filepath="$PROJECT_DIR$/DroidFishTFG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DroidfishTFG.iml" filepath="$PROJECT_DIR$/DroidfishTFG.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cuckoochessengine/cuckoochessengine.iml" filepath="$PROJECT_DIR$/cuckoochessengine/cuckoochessengine.iml" />
       <module fileurl="file://$PROJECT_DIR$/cuckoochessengine/cuckoochessengine.iml" filepath="$PROJECT_DIR$/cuckoochessengine/cuckoochessengine.iml" />
     </modules>
   </component>

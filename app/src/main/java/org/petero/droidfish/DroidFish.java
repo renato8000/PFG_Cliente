@@ -149,6 +149,7 @@ import tourguide.tourguide.TourGuide;
 public class DroidFish extends Activity
         implements GUIInterface,
         ActivityCompat.OnRequestPermissionsResultCallback {
+    //Modificacion de prueba
     // FIXME!!! PGN view option: game continuation (for training)
     // FIXME!!! Remove invalid playerActions in PGN import (should be done in verifyChildren)
     // FIXME!!! Implement bookmark mechanism for positions in pgn files
