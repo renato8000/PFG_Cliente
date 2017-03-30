@@ -37,9 +37,11 @@ you are not actively using the program.\
     <string name="share_pgn_game">Share PGN game</string>
     <string name="load_last_file">Load from last file</string>
     <string name="load_game">Load game from PGN file</string>
+    <string name="load_game_qr">Load game from QR file</string>
     <string name="load_position">Load position from file</string>
     <string name="load_scid_game">Load game from Scid file</string>
     <string name="save_game">Save game to PGN file</string>
+    <string name="save_game_qr">Save game to QR file</string>
     <string name="get_fen">Retrieve Position</string>
     <string name="truncate_gametree">Truncate Game Tree</string>
     <string name="move_var_up">Move Variation Up</string>
@@ -47,6 +49,9 @@ you are not actively using the program.\
     <string name="add_null_move">Add Null Move</string>
     <string name="tools_menu">Tools</string>
     <string name="load_save_menu">Load/Save Game</string>
+    <string name="load_qr_menu">Load Game</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="open_gallery">Open Gallery</string>
     <string name="goto_move">Goto move</string>
     <string name="edit_strength">Edit Strength</string>
     <string name="edit_randomization">Edit Randomization</string>
@@ -435,6 +440,16 @@ you are not actively using the program.\
     <string name="buttonDesc_forward">Forward button</string>
     <string name="load_qr_leftdrawer">Load game from QR code</string>
     <string name="save_qr_leftdrawer">Save game to QR code</string>
+    <string name="choose_formats">Choose Formats</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="select_camera">Select a Camera</string>
+    <string name="flash_on">Flash [ON]</string>
+    <string name="flash_off">Flash [OFF]</string>
+    <string name="auto_focus_on">Auto Focus [ON]</string>
+    <string name="auto_focus_off">Auto Focus [OFF]</string>
+    <string name="formats">Formats</string>
+    <string name="scanner_activity">ZXing Scanner - Full Activity</string>
     <string-array name="viewPieceType_texts">
         <item>English letters</item>
         <item>Local language letters</item>

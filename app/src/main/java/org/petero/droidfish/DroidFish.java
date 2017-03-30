@@ -271,6 +271,9 @@ public class DroidFish extends Activity
     private boolean guideShowOnStart;
     private TourGuide tourGuide;
 
+    private Class<?> mClss;
+    private static final int ZXING_CAMERA_PERMISSION = 1000;
+    static private final int CODIGO_CAM = 2000;
 
     /**
      * Defines all configurable button actions.
@@ -1899,6 +1902,13 @@ public class DroidFish extends Activity
                     ctrl.setEngineUCIOptions(uciOpts);
                 }
                 break;
+            case CODIGO_CAM:
+                if (resultCode == RESULT_OK) {
+                    String mensaje = data.getExtras().getString("mensajeDec");
+                    Toast.makeText(this, "Deco: "+mensaje, Toast.LENGTH_LONG).show();
+                    //resulDeco.setText(mensaje);
+                }
+                break;
         }
     }
 
@@ -2477,6 +2487,8 @@ public class DroidFish extends Activity
         final int LOAD_POS = 2;
         final int LOAD_SCID_GAME = 3;
         final int SAVE_GAME = 4;
+        final int LOAD_GAME_QR = 5;
+        final int SAVE_GAME_QR = 6;
 
         setAutoMode(AutoMode.OFF);
         List<CharSequence> lst = new ArrayList<CharSequence>();
@@ -2495,6 +2507,10 @@ public class DroidFish extends Activity
         }
         lst.add(getString(R.string.save_game));
         actions.add(SAVE_GAME);
+        lst.add(getString(R.string.save_game_qr));
+        actions.add(SAVE_GAME_QR);
+        lst.add(getString(R.string.load_game_qr));
+        actions.add(LOAD_GAME_QR);
         final List<Integer> finalActions = actions;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.load_save_menu);
@@ -2506,8 +2522,8 @@ public class DroidFish extends Activity
                         break;
                     case LOAD_GAME:
                         selectFile(R.string.select_pgn_file, R.string.pgn_load, "currentPGNFile", pgnDir,
-                                SELECT_PGN_FILE_DIALOG, RESULT_OI_PGN_LOAD);
-                        break;
+                            SELECT_PGN_FILE_DIALOG, RESULT_OI_PGN_LOAD);
+                    break;
                     case SAVE_GAME:
                         selectFile(R.string.select_pgn_file_save, R.string.pgn_save, "currentPGNFile", pgnDir,
                                 SELECT_PGN_FILE_SAVE_DIALOG, RESULT_OI_PGN_SAVE);
@@ -2519,11 +2535,67 @@ public class DroidFish extends Activity
                     case LOAD_SCID_GAME:
                         selectScidFile();
                         break;
+                    case LOAD_GAME_QR:
+                        cargarPartidaQR();
+                        break;
+                    case SAVE_GAME_QR:
+                        guardarPartidaQR();
+                        break;
                 }
             }
         });
         AlertDialog alert = builder.create();
         return alert;
+    }
+
+    /**
+     * Carga un archivo QR desde la cámara o galería
+     */
+    private final void cargarPartidaQR(){
+        final int OPEN_CAMERA = 1;
+        final int OPEN_GALLERY = 2;
+
+        List<CharSequence> lst = new ArrayList<CharSequence>();
+        List<Integer> actions = new ArrayList<Integer>();
+        lst.add(getString(R.string.open_camera));
+        lst.add(getString(R.string.open_gallery));
+        actions.add(OPEN_CAMERA);
+        actions.add(OPEN_GALLERY);
+        final List<Integer> finalActions = actions;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.load_qr_menu);
+        builder.setItems(lst.toArray(new CharSequence[lst.size()]), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                switch (finalActions.get(item)) {
+                    case OPEN_CAMERA:
+                        launchActivity(FullScannerActivity.class);
+                        break;
+                    case OPEN_GALLERY:
+
+                        break;
+                }
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    public void launchActivity(Class<?> clss) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            mClss = clss;
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA}, ZXING_CAMERA_PERMISSION);
+        } else {
+            Intent intent = new Intent(this, clss);
+            //startActivity(intent);
+            startActivityForResult(intent,CODIGO_CAM);
+        }
+    }
+
+
+    private final void guardarPartidaQR(){
+
     }
 
     /**

@@ -36,9 +36,11 @@ Si está usted utilizando la batería, se recomienda que cambie los ajustes para
   <string name="share_pgn_game">Compartir partida PGN</string>
   <string name="load_last_file">Cargar desde el último archivo</string>
   <string name="load_game">Cargar partida desde archivo PGN</string>
+  <string name="load_game_qr">Cargar partida desde archivo QR</string>
   <string name="load_position">Cargar posición desde el archivo</string>
   <string name="load_scid_game">Cargar partida desde archivo Scid</string>
   <string name="save_game">Guardar partida en archivo PGN</string>
+  <string name="save_game_qr">Guardar partida en archivo QR</string>
   <string name="get_fen">Importar Posición</string>
   <string name="truncate_gametree">Podar Árbol de Variantes</string>
   <string name="move_var_up">Subir Variante </string>
@@ -46,6 +48,9 @@ Si está usted utilizando la batería, se recomienda que cambie los ajustes para
   <string name="add_null_move">Añadir Movimiento Nulo</string>
   <string name="tools_menu">Herramientas</string>
   <string name="load_save_menu">Cargar/Guardar Partida</string>
+  <string name="load_qr_menu">Cargar Partida</string>
+  <string name="open_camera">Abrir Cámara</string>
+  <string name="open_gallery">Abrir Galería</string>
   <string name="goto_move">Ir a la jugada</string>
   <string name="edit_strength">Editar Fuerza de juego</string>
   <string name="edit_randomization">Editar Aleatoriedad</string>
@@ -430,6 +435,16 @@ Si está usted utilizando la batería, se recomienda que cambie los ajustes para
   <string name="buttonDesc_mode">Botón de modo</string>
   <string name="buttonDesc_back">Botón de retroceso</string>
   <string name="buttonDesc_forward">Botón de avance</string>
+  <string name="choose_formats">Elegir Formatos</string>
+  <string name="ok_button">OK</string>
+  <string name="cancel_button">Cancelar</string>
+  <string name="select_camera">Seleccionar cámara</string>
+  <string name="flash_on">Flash [ON]</string>
+  <string name="flash_off">Flash [OFF]</string>
+  <string name="auto_focus_on">Auto Focus [ON]</string>
+  <string name="auto_focus_off">Auto Focus [OFF]</string>
+  <string name="formats">Formatos</string>
+  <string name="scanner_activity">ZXing Scanner - Full Activity</string>
   <string-array name="viewPieceType_texts">
     <item>Notación en inglés</item>
     <item>Notación en el idioma local</item>
