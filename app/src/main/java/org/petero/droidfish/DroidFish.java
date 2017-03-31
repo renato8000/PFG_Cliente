@@ -120,6 +120,7 @@ import org.petero.droidfish.gamelogic.Piece;
 import org.petero.droidfish.gamelogic.Position;
 import org.petero.droidfish.gamelogic.TextIO;
 import org.petero.droidfish.gamelogic.TimeControlData;
+import org.petero.droidfish.qr.QRResultActivity;
 import org.petero.droidfish.tb.Probe;
 import org.petero.droidfish.tb.ProbeResult;
 
@@ -2602,6 +2603,10 @@ public class DroidFish extends Activity
 
 
     private final void guardarPartidaQR(){
+        String pgn = ctrl.getPGN();
+        Intent intent = new Intent(this, QRResultActivity.class);
+        intent.putExtra("pgn_text",pgn);
+        startActivity(intent);
 
 
     }

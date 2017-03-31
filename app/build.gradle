@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.jmga.droidfishtfg"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -30,7 +30,7 @@ android {
     defaultConfig {
         externalNativeBuild {
             cmake {
-                targets "nativeutil","gtb","rtb","stockfish"
+                targets "nativeutil", "gtb", "rtb", "stockfish"
                 arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=c++_static"
                 abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
             }
@@ -45,7 +45,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.0'
-    testCompile 'junit:junit:4.12'
     compile 'com.google.zxing:core:3.2.1'
     compile 'me.dm7.barcodescanner:core:1.9'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
 }
