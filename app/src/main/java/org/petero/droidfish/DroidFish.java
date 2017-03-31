@@ -1904,9 +1904,16 @@ public class DroidFish extends Activity
                 break;
             case CODIGO_CAM:
                 if (resultCode == RESULT_OK) {
-                    String mensaje = data.getExtras().getString("mensajeDec");
-                    Toast.makeText(this, "Deco: "+mensaje, Toast.LENGTH_LONG).show();
-                    //resulDeco.setText(mensaje);
+                    try {
+                        String qr = data.getExtras().getString("mensajeDec");
+                        int modeNr = ctrl.getGameMode().getModeNr();
+                        if ((modeNr != GameMode.ANALYSIS) && (modeNr != GameMode.EDIT_GAME))
+                            newGameMode(GameMode.EDIT_GAME);
+                        ctrl.setFENOrPGN(qr);
+                        setBoardFlip(true);
+                    } catch (ChessParseError e) {
+                        Toast.makeText(getApplicationContext(), getParseErrString(e), Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
         }
@@ -2595,6 +2602,7 @@ public class DroidFish extends Activity
 
 
     private final void guardarPartidaQR(){
+
 
     }
 
