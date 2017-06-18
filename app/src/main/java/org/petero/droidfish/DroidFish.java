@@ -45,6 +45,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.StateListDrawable;
 import android.media.MediaPlayer;
@@ -55,6 +56,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MotionEventCompat;
@@ -87,12 +89,21 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.ChecksumException;
+import com.google.zxing.FormatException;
+import com.google.zxing.RGBLuminanceSource;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.multi.qrcode.QRCodeMultiReader;
+import com.google.zxing.qrcode.QRCodeReader;
+import com.google.zxing.qrcode.decoder.QRCodeDecoderMetaData;
 import com.kalab.chess.enginesupport.ChessEngine;
 import com.kalab.chess.enginesupport.ChessEngineResolver;
 import com.larvalabs.svgandroid.SVG;
@@ -120,6 +131,7 @@ import org.petero.droidfish.gamelogic.Piece;
 import org.petero.droidfish.gamelogic.Position;
 import org.petero.droidfish.gamelogic.TextIO;
 import org.petero.droidfish.gamelogic.TimeControlData;
+import org.petero.droidfish.qr.QRAlphanumParser;
 import org.petero.droidfish.qr.QRResultActivity;
 import org.petero.droidfish.tb.Probe;
 import org.petero.droidfish.tb.ProbeResult;
@@ -275,6 +287,7 @@ public class DroidFish extends Activity
     private Class<?> mClss;
     private static final int ZXING_CAMERA_PERMISSION = 1000;
     static private final int CODIGO_CAM = 2000;
+    private static final int PICK_IMAGE_REQUEST = 22003;
 
     /**
      * Defines all configurable button actions.
@@ -1917,6 +1930,44 @@ public class DroidFish extends Activity
                     }
                 }
                 break;
+            case PICK_IMAGE_REQUEST:
+                if (resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+                    loadFromQR(data);
+                }
+        }
+    }
+
+    private void loadFromQR(Intent data){
+        Uri uri = data.getData();
+
+        try {
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+            int height = bitmap.getHeight();
+            int width = bitmap.getWidth();
+            int []pixels = new int [width*height];
+            bitmap.getPixels(pixels,0,width,0,0,width,height);
+            RGBLuminanceSource source = new RGBLuminanceSource(width,height,pixels);
+            // Log.d(TAG, String.valueOf(bitmap));
+            String qr = new QRCodeReader().decode(new BinaryBitmap(new HybridBinarizer(source))).getText();
+            System.out.println("Antes "+qr);
+            qr = QRAlphanumParser.parseToPGN(qr);
+            System.out.println("Después "+qr);
+            int modeNr = ctrl.getGameMode().getModeNr();
+            if ((modeNr != GameMode.ANALYSIS) && (modeNr != GameMode.EDIT_GAME))
+                newGameMode(GameMode.EDIT_GAME);
+            ctrl.setFENOrPGN(qr);
+            setBoardFlip(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }catch (ChessParseError e) {
+            Toast.makeText(getApplicationContext(), getParseErrString(e), Toast.LENGTH_SHORT).show();
+        } catch(com.google.zxing.NotFoundException e){
+
+        } catch (ChecksumException e) {
+            e.printStackTrace();
+        } catch (FormatException e) {
+            e.printStackTrace();
         }
     }
 
@@ -2579,7 +2630,12 @@ public class DroidFish extends Activity
                         launchActivity(FullScannerActivity.class);
                         break;
                     case OPEN_GALLERY:
-
+                        Intent intent = new Intent();
+// Show only images, no videos or anything else
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+// Always show the chooser (if there are multiple options available)
+                        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                         break;
                 }
             }
