@@ -2656,11 +2656,9 @@ public class DroidFish extends Activity
                         break;
                     case OPEN_GALLERY:
                         Intent intent = new Intent();
-// Show only images, no videos or anything else
-                        Uri selectedUri = Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getPath() + "/DroidFishQR/");
+                        Uri selectedUri = Uri.parse(Environment.getExternalStorageDirectory().getPath() + "/DroidFishQR/");
                         intent.setDataAndType(selectedUri, "image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
-// Always show the chooser (if there are multiple options available)
                         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                         break;
                 }

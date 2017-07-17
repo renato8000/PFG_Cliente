@@ -157,13 +157,12 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
         protected File doInBackground(Bitmap... bitmaps) {
             File file_path = null;
             try {
-                File sdPath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DroidFishQR");
+                File sdPath = new File(Environment.getExternalStorageDirectory(), "DroidFishQR");
                 sdPath.mkdirs(); // don't forget to make the directory
                 FileOutputStream stream = new FileOutputStream(sdPath + "/" + name + ".png"); // overwrites this image every time
                 bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
                 stream.close();
                 file_path = new File(sdPath, "/" + name + ".png");
-                //sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,Uri.fromFile(image_path)));
             } catch (IOException e) {
             }
             return file_path;
