@@ -158,7 +158,7 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
             File file_path = null;
             try {
                 File sdPath = new File(Environment.getExternalStorageDirectory(), "DroidFishQR");
-                sdPath.mkdirs(); // don't forget to make the directory
+                sdPath.mkdirs();
                 FileOutputStream stream = new FileOutputStream(sdPath + "/" + name + ".png"); // overwrites this image every time
                 bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
                 stream.close();
@@ -172,8 +172,7 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
         protected void onPostExecute(File file) {
             if (file != null) {
                 Toast.makeText(context, "Imagen guardada correctamente en " + file.getPath(), Toast.LENGTH_LONG).show();
-                // Tell the media scanner about the new file so that it is
-                // immediately available to the user.
+
                 MediaScannerConnection.scanFile(context,
                         new String[]{file.toString()}, null,
                         new MediaScannerConnection.OnScanCompletedListener() {
