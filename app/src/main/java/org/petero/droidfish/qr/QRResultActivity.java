@@ -3,16 +3,19 @@ package org.petero.droidfish.qr;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.content.FileProvider;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,7 +38,7 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
     private String PGNText = "";
     private ImageView qrView;
     private ProgressBar qrProgressBar;
-    private MenuItem selectedItem;
+    private MenuItem shareItem, saveItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +49,23 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        setResult(RESULT_OK);
+        finish();
+
+
+    }
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate menu resource file.
         getMenuInflater().inflate(R.menu.result_qr_menu, menu);
 
         // Locate MenuItem with ShareActionProvider
-        MenuItem item = menu.findItem(R.id.menu_item_share);
-        selectedItem = item;
+        shareItem = menu.findItem(R.id.menu_item_share);
+        saveItem = menu.findItem(R.id.menu_item_save);
         // Fetch and store ShareActionProvider
-        mShareActionProvider = (ShareActionProvider) item.getActionProvider();
+        mShareActionProvider = (ShareActionProvider) shareItem.getActionProvider();
 
         Intent intent = getIntent();
         PGNText = intent.getStringExtra("pgn_text");
@@ -99,21 +110,7 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             final String name = text.getText().toString();
-                            new AsyncTask<Bitmap, Void, Void>() {
-                                @Override
-                                protected Void doInBackground(Bitmap... bitmaps) {
-                                    try {
-                                        File sdPath = new File(Environment.getExternalStorageDirectory(), "DroidFishQR");
-                                        sdPath.mkdirs(); // don't forget to make the directory
-                                        FileOutputStream stream = new FileOutputStream(sdPath + "/" + name + ".png"); // overwrites this image every time
-                                        bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
-                                        stream.close();
-                                    } catch (IOException e) {
-
-                                    }
-                                    return null;
-                                }
-                            }.execute(imageFinal);
+                            new SaveQRClass(name, getApplicationContext()).execute(imageFinal);
                         }
                     }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                 @Override
@@ -135,15 +132,60 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
             case DialogInterface.BUTTON_POSITIVE:
                 System.out.println("Antes:" + PGNText);
                 PGNText = QRAlphanumParser.parseToAlphanum(PGNText);
-                qrGenerator = new AsyncQRGenerator(qrView, qrProgressBar, selectedItem, mShareActionProvider, this.getApplicationContext());
+                qrGenerator = new AsyncQRGenerator(qrView, qrProgressBar, shareItem, saveItem, mShareActionProvider, this.getApplicationContext());
                 qrGenerator.execute(PGNText);
                 System.out.println("Despues:" + PGNText);
                 break;
             case DialogInterface.BUTTON_NEGATIVE:
-                qrGenerator = new AsyncQRGenerator(qrView, qrProgressBar, selectedItem, mShareActionProvider, this.getApplicationContext());
+                qrGenerator = new AsyncQRGenerator(qrView, qrProgressBar, shareItem, saveItem, mShareActionProvider, this.getApplicationContext());
                 qrGenerator.execute(PGNText);
                 System.out.println("NEGATIV");
                 break;
+        }
+    }
+
+    private class SaveQRClass extends AsyncTask<Bitmap, Void, File> {
+        private String name;
+        private Context context;
+
+        private SaveQRClass(String name, Context context) {
+            this.name = name;
+            this.context = context;
+        }
+
+        @Override
+        protected File doInBackground(Bitmap... bitmaps) {
+            File file_path = null;
+            try {
+                File sdPath = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "DroidFishQR");
+                sdPath.mkdirs(); // don't forget to make the directory
+                FileOutputStream stream = new FileOutputStream(sdPath + "/" + name + ".png"); // overwrites this image every time
+                bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
+                stream.close();
+                file_path = new File(sdPath, "/" + name + ".png");
+                //sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,Uri.fromFile(image_path)));
+            } catch (IOException e) {
+            }
+            return file_path;
+        }
+
+        @Override
+        protected void onPostExecute(File file) {
+            if (file != null) {
+                Toast.makeText(context, "Imagen guardada correctamente en " + file.getPath(), Toast.LENGTH_LONG).show();
+                // Tell the media scanner about the new file so that it is
+                // immediately available to the user.
+                MediaScannerConnection.scanFile(context,
+                        new String[]{file.toString()}, null,
+                        new MediaScannerConnection.OnScanCompletedListener() {
+                            public void onScanCompleted(String path, Uri uri) {
+                                Log.i("ExternalStorage", "Scanned " + path + ":");
+                                Log.i("ExternalStorage", "-> uri=" + uri);
+                            }
+                        });
+            } else {
+                Toast.makeText(context, "Error al guardar la imagen", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

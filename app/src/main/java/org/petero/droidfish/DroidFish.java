@@ -49,6 +49,7 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.StateListDrawable;
 import android.media.MediaPlayer;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -70,6 +71,7 @@ import android.text.style.BackgroundColorSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.LeadingMarginSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -286,8 +288,7 @@ public class DroidFish extends Activity
 
     private Class<?> mClss;
     private static final int ZXING_CAMERA_PERMISSION = 1000;
-    static private final int CODIGO_CAM = 2000;
-    private static final int PICK_IMAGE_REQUEST = 22003;
+
 
     /**
      * Defines all configurable button actions.
@@ -1814,6 +1815,9 @@ public class DroidFish extends Activity
     static private final int RESULT_OI_FEN_LOAD = 7;
     static private final int RESULT_GET_FEN = 8;
     static private final int RESULT_EDITOPTIONS = 9;
+    private static final int CODIGO_CAM = 10;
+    private static final int PICK_IMAGE_REQUEST = 11;
+    private static final int RESULT_SAVE_QR = 12;
 
     private void startEditBoard(String fen) {
         Intent i = new Intent(DroidFish.this, EditBoard.class);
@@ -1924,6 +1928,12 @@ public class DroidFish extends Activity
 
                     loadFromGallery(data);
                 }
+                break;
+            case RESULT_SAVE_QR:
+                if (resultCode == RESULT_OK) {
+
+                }
+
         }
     }
 
@@ -2647,7 +2657,7 @@ public class DroidFish extends Activity
                     case OPEN_GALLERY:
                         Intent intent = new Intent();
 // Show only images, no videos or anything else
-                        Uri selectedUri = Uri.parse(Environment.getExternalStorageDirectory() + "/DroidFishQR/");
+                        Uri selectedUri = Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getPath() + "/DroidFishQR/");
                         intent.setDataAndType(selectedUri, "image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
 // Always show the chooser (if there are multiple options available)
@@ -2681,7 +2691,7 @@ public class DroidFish extends Activity
         String pgn = ctrl.getPGN();
         Intent intent = new Intent(this, QRResultActivity.class);
         intent.putExtra("pgn_text", pgn);
-        startActivity(intent);
+        startActivityForResult(intent, RESULT_SAVE_QR);
 
     }
 

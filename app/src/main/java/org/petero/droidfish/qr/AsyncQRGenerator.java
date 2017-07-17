@@ -36,15 +36,17 @@ public class AsyncQRGenerator extends AsyncTask<String, Void, Bitmap> {
 
     private ImageView imageView = null;
     private ProgressBar progressBar = null;
-    private MenuItem item = null;
+    private MenuItem shareItem = null;
+    private MenuItem saveItem = null;
     private ShareActionProvider shareActionProvider = null;
     private Bitmap result = null;
     private Context context= null;
 
-    public AsyncQRGenerator(ImageView imageView, ProgressBar progressBar, MenuItem item, ShareActionProvider shareActionProvider,Context context){
+    public AsyncQRGenerator(ImageView imageView, ProgressBar progressBar, MenuItem shareItem, MenuItem saveItem, ShareActionProvider shareActionProvider, Context context) {
         this.imageView = imageView;
         this.progressBar = progressBar;
-        this.item = item;
+        this.shareItem = shareItem;
+        this.saveItem = saveItem;
         this.shareActionProvider = shareActionProvider;
         this.context = context;
     }
@@ -93,7 +95,8 @@ public class AsyncQRGenerator extends AsyncTask<String, Void, Bitmap> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        item.setVisible(true);
+        shareItem.setVisible(true);
+        saveItem.setVisible(true);
         File imagePath = new File(context.getCacheDir(), "images");
         File newFile = new File(imagePath, "image.png");
         Uri contentUri = FileProvider.getUriForFile(context, "org.petero.droidfish.fileprovider", newFile);
