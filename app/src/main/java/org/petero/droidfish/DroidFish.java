@@ -1693,8 +1693,6 @@ public class DroidFish extends Activity
                 new DrawerItem(ITEM_MANAGE_ENGINES, R.string.option_manage_engines),
                 new DrawerItem(ITEM_SET_COLOR_THEME, R.string.option_color_theme),
                 new DrawerItem(ITEM_SETTINGS, R.string.option_settings),
-                new DrawerItem(ITEM_SAVE_QR, R.string.save_qr_leftdrawer),
-                new DrawerItem(ITEM_LOAD_QR, R.string.load_qr_leftdrawer),
                 new DrawerItem(ITEM_ABOUT, R.string.option_about)
         };
         leftDrawer.setAdapter(new ArrayAdapter<DrawerItem>(this,
@@ -1918,41 +1916,37 @@ public class DroidFish extends Activity
                 break;
             case CODIGO_CAM:
                 if (resultCode == RESULT_OK) {
-                    try {
-                        String qr = data.getExtras().getString("mensajeDec");
-                        int modeNr = ctrl.getGameMode().getModeNr();
-                        if ((modeNr != GameMode.ANALYSIS) && (modeNr != GameMode.EDIT_GAME))
-                            newGameMode(GameMode.EDIT_GAME);
-                        ctrl.setFENOrPGN(qr);
-                        setBoardFlip(true);
-                    } catch (ChessParseError e) {
-                        Toast.makeText(getApplicationContext(), getParseErrString(e), Toast.LENGTH_SHORT).show();
-                    }
+                    loadFromScannerResult(data);
                 }
                 break;
             case PICK_IMAGE_REQUEST:
                 if (resultCode == RESULT_OK && data != null && data.getData() != null) {
 
-                    loadFromQR(data);
+                    loadFromGallery(data);
                 }
         }
     }
 
-    private void loadFromQR(Intent data){
+    /**
+     * Load QR chosen from the gallery.
+     *
+     * @param data
+     */
+    private void loadFromGallery(Intent data) {
         Uri uri = data.getData();
 
         try {
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
             int height = bitmap.getHeight();
             int width = bitmap.getWidth();
-            int []pixels = new int [width*height];
-            bitmap.getPixels(pixels,0,width,0,0,width,height);
-            RGBLuminanceSource source = new RGBLuminanceSource(width,height,pixels);
+            int[] pixels = new int[width * height];
+            bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+            RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);
             // Log.d(TAG, String.valueOf(bitmap));
             String qr = new QRCodeReader().decode(new BinaryBitmap(new HybridBinarizer(source))).getText();
-            System.out.println("Antes "+qr);
+            System.out.println("Antes " + qr);
             qr = QRAlphanumParser.parseToPGN(qr);
-            System.out.println("Después "+qr);
+            System.out.println("Después " + qr);
             int modeNr = ctrl.getGameMode().getModeNr();
             if ((modeNr != GameMode.ANALYSIS) && (modeNr != GameMode.EDIT_GAME))
                 newGameMode(GameMode.EDIT_GAME);
@@ -1960,14 +1954,33 @@ public class DroidFish extends Activity
             setBoardFlip(true);
         } catch (IOException e) {
             e.printStackTrace();
-        }catch (ChessParseError e) {
+        } catch (ChessParseError e) {
             Toast.makeText(getApplicationContext(), getParseErrString(e), Toast.LENGTH_SHORT).show();
-        } catch(com.google.zxing.NotFoundException e){
+        } catch (com.google.zxing.NotFoundException e) {
 
         } catch (ChecksumException e) {
             e.printStackTrace();
         } catch (FormatException e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * Load QR scanned by the camera.
+     *
+     * @param data
+     */
+    private void loadFromScannerResult(Intent data) {
+        try {
+            String qr = data.getExtras().getString("mensajeDec");
+            qr = QRAlphanumParser.parseToPGN(qr);
+            int modeNr = ctrl.getGameMode().getModeNr();
+            if ((modeNr != GameMode.ANALYSIS) && (modeNr != GameMode.EDIT_GAME))
+                newGameMode(GameMode.EDIT_GAME);
+            ctrl.setFENOrPGN(qr);
+            setBoardFlip(true);
+        } catch (ChessParseError e) {
+            Toast.makeText(getApplicationContext(), getParseErrString(e), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -2581,8 +2594,8 @@ public class DroidFish extends Activity
                         break;
                     case LOAD_GAME:
                         selectFile(R.string.select_pgn_file, R.string.pgn_load, "currentPGNFile", pgnDir,
-                            SELECT_PGN_FILE_DIALOG, RESULT_OI_PGN_LOAD);
-                    break;
+                                SELECT_PGN_FILE_DIALOG, RESULT_OI_PGN_LOAD);
+                        break;
                     case SAVE_GAME:
                         selectFile(R.string.select_pgn_file_save, R.string.pgn_save, "currentPGNFile", pgnDir,
                                 SELECT_PGN_FILE_SAVE_DIALOG, RESULT_OI_PGN_SAVE);
@@ -2608,9 +2621,11 @@ public class DroidFish extends Activity
     }
 
     /**
-     * Carga un archivo QR desde la cámara o galería
+     * Menú para ejecutar los procesos de carga desde un código QR:
+     *  - En el caso de la cámara se lanza FullScannerActivity.
+     *  - En el caso de la galería se lanza la aplicación por defecto del teléfono.
      */
-    private final void cargarPartidaQR(){
+    private final void cargarPartidaQR() {
         final int OPEN_CAMERA = 1;
         final int OPEN_GALLERY = 2;
 
@@ -2632,7 +2647,8 @@ public class DroidFish extends Activity
                     case OPEN_GALLERY:
                         Intent intent = new Intent();
 // Show only images, no videos or anything else
-                        intent.setType("image/*");
+                        Uri selectedUri = Uri.parse(Environment.getExternalStorageDirectory() + "/DroidFishQR/");
+                        intent.setDataAndType(selectedUri, "image/*");
                         intent.setAction(Intent.ACTION_GET_CONTENT);
 // Always show the chooser (if there are multiple options available)
                         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
@@ -2653,17 +2669,19 @@ public class DroidFish extends Activity
         } else {
             Intent intent = new Intent(this, clss);
             //startActivity(intent);
-            startActivityForResult(intent,CODIGO_CAM);
+            startActivityForResult(intent, CODIGO_CAM);
         }
     }
 
-
-    private final void guardarPartidaQR(){
+    /**
+     * Método que ejecuta el proceso de guardado.
+     * Se lanza QRResultActivity pasándole la partida en formato PGN.
+     */
+    private final void guardarPartidaQR() {
         String pgn = ctrl.getPGN();
         Intent intent = new Intent(this, QRResultActivity.class);
-        intent.putExtra("pgn_text",pgn);
+        intent.putExtra("pgn_text", pgn);
         startActivity(intent);
-
 
     }
 

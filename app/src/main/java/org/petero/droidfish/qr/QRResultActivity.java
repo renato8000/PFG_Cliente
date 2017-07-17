@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ShareActionProvider;
+import android.widget.Toast;
 
 import org.petero.droidfish.R;
 
@@ -107,7 +108,6 @@ public class QRResultActivity extends Activity implements DialogInterface.OnClic
                                         FileOutputStream stream = new FileOutputStream(sdPath + "/" + name + ".png"); // overwrites this image every time
                                         bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
                                         stream.close();
-
                                     } catch (IOException e) {
 
                                     }
