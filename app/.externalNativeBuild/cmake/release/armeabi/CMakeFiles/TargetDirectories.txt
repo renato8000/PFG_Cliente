@@ -1,0 +1,6 @@
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/nativeutil.dir
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/gtb.dir
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/stockfish.dir
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/rtb.dir
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/edit_cache.dir
+C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/release/armeabi/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,399 @@
+
+{
+	"buildFiles" : [ "C:/Dev/git/DroidFishTFG/app/CMakeLists.txt" ],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\LordVulkan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Dev\\git\\DroidFishTFG\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"gtb-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "gtb",
+			"buildCommand" : "C:\\Users\\LordVulkan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Dev\\git\\DroidFishTFG\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target gtb",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/gtb-probe.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/gtb-dec.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/gtb-att.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/sysport/sysport.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/wrap.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/huffman/hzip.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/LzmaEnc.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/LzmaDec.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/Alloc.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/LzFind.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/Lzma86Enc.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/Lzma86Dec.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/lzma/Bra86.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/zcompress.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/uncompr.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/inflate.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/deflate.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/adler32.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/crc32.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/infback.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/inffast.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/inftrees.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/trees.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/zlib/zutil.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/liblzf/lzf_c.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/compression/liblzf/lzf_d.c",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -DZ_PREFIX -D__ANDROID__ -Dgtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\sysport -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\liblzf -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\zlib -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\lzma -I..\\..\\..\\..\\src\\main\\cpp\\gtb\\compression\\huffman -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/gtb/GtbProbe.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "C:/Dev/git/DroidFishTFG/app/build/intermediates/cmake/debug/obj/x86_64/libgtb.so",
+			"toolchain" : "3174338433"
+		},
+		"nativeutil-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "nativeutil",
+			"buildCommand" : "C:\\Users\\LordVulkan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Dev\\git\\DroidFishTFG\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target nativeutil",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -Dnativeutil_EXPORTS -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/nativeutil.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "C:/Dev/git/DroidFishTFG/app/build/intermediates/cmake/debug/obj/x86_64/libnativeutil.so",
+			"toolchain" : "3174338433"
+		},
+		"rtb-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "rtb",
+			"buildCommand" : "C:\\Users\\LordVulkan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Dev\\git\\DroidFishTFG\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target rtb",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/bitBoard.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/material.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/moveGen.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/position.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/rtb-probe.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/tbprobe.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot  -DTARGET_OS=android -D_GLIBCXX_HAS_GTHREADS -D_GLIBCXX_USE_C99_STDINT_TR1 -D_GLIBCXX__PTHREADS -D__ANDROID__ -D__STDC_INT64__ -Drtb_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\rtb -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/rtb/RtbProbe.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "C:/Dev/git/DroidFishTFG/app/build/intermediates/cmake/debug/obj/x86_64/librtb.so",
+			"toolchain" : "3174338433"
+		},
+		"stockfish-Debug-x86_64" : 
+		{
+			"abi" : "x86_64",
+			"artifactName" : "stockfish",
+			"buildCommand" : "C:\\Users\\LordVulkan\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Dev\\git\\DroidFishTFG\\app\\.externalNativeBuild\\cmake\\debug\\x86_64 --target stockfish",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/main.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/benchmark.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/bitbase.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/bitboard.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/endgame.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/evaluate.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/material.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/misc.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/movegen.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/movepick.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/pawns.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/position.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/psqt.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/search.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/thread.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/timeman.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/tt.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/uci.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/ucioption.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				},
+				
+				{
+					"flags" : "  --target=x86_64-none-linux-android --gcc-toolchain=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot   -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src -I..\\..\\..\\..\\src\\main\\cpp\\Stockfish\\src\\syzygy -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\android\\support\\include -isystem C:\\Users\\LordVulkan\\AppData\\Local\\Android\\sdk\\ndk-bundle\\sources\\cxx-stl\\llvm-libc++abi\\include  -isystem C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O0 -fno-limit-debug-info  -fPIE    -c ",
+					"src" : "C:/Dev/git/DroidFishTFG/app/src/main/cpp/Stockfish/src/syzygy/tbprobe.cpp",
+					"workingDirectory" : "C:/Dev/git/DroidFishTFG/app/.externalNativeBuild/cmake/debug/x86_64"
+				}
+			],
+			"output" : "C:/Dev/git/DroidFishTFG/app/src/main/assets/engine/x86_64/stockfish",
+			"toolchain" : "3174338433"
+		}
+	},
+	"toolchains" : 
+	{
+		"3174338433" : 
+		{
+			"cCompilerExecutable" : "C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/LordVulkan/AppData/Local/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

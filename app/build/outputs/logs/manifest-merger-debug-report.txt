@@ -1,0 +1,311 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+MERGED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:17:1-31:12
+MERGED from [me.dm7.barcodescanner:core:1.9.3] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\core-1.9.3.aar\b74801c57a593138f543086f729640f8\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\76cdafdde1fd3e453131817bf42424a2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+	package
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:1-336:12
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:7:22-63
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:8:5-65
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:8:22-62
+application
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:10:5-334:19
+MERGED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:25:5-29:19
+MERGED from [me.dm7.barcodescanner:core:1.9.3] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\core-1.9.3.aar\b74801c57a593138f543086f729640f8\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.3] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\core-1.9.3.aar\b74801c57a593138f543086f729640f8\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\76cdafdde1fd3e453131817bf42424a2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\76cdafdde1fd3e453131817bf42424a2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:12:9-36
+	android:allowBackup
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:15:9-40
+provider#android.support.v4.content.FileProvider
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:16:9-24:20
+	android:grantUriPermissions
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:19:13-47
+	android:authorities
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:18:13-68
+	android:exported
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:17:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:21:13-23:53
+	android:resource
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:23:17-50
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:22:17-67
+activity#org.petero.droidfish.DroidFish
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:25:9-294:20
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:28:13-45
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:27:13-74
+	android:theme
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:29:13-66
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:26:13-38
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:33:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:application/x-chess-pgn
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:35:13-41:29
+action#android.intent.action.VIEW
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:38:27-73
+data
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:40:17-68
+	android:host
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:48:21-37
+	android:scheme
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:51:21-42
+	android:pathPattern
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:50:21-51
+	android:mimeType
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:40:23-65
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:application/octet-stream+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:mimeType:text/plain+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\.epd+data:pathPattern:.*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\.fen+data:pathPattern:.*\\..*\\..*\\.pgn+data:pathPattern:.*\\..*\\.epd+data:pathPattern:.*\\..*\\.epd+data:pathPattern:.*\\..*\\.fen+data:pathPattern:.*\\..*\\.fen+data:pathPattern:.*\\..*\\.pgn+data:pathPattern:.*\\.epd+data:pathPattern:.*\\.epd+data:pathPattern:.*\\.fen+data:pathPattern:.*\\.fen+data:pathPattern:.*\\.pgn+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:42:13-272:29
+intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:application/x-chess-pgn
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:273:13-279:29
+action#android.intent.action.SEND
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:274:17-69
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:274:25-66
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:application/x-chess-fen
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:280:13-286:29
+intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:application/x-chess-fen
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:287:13-293:29
+activity#org.petero.droidfish.activities.Preferences
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:295:9-297:51
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:297:13-48
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:296:13-51
+activity#org.petero.droidfish.activities.EditBoard
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:298:9-301:50
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:301:13-47
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:300:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:299:13-49
+activity#org.petero.droidfish.activities.EditPGNLoad
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:302:9-305:55
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:305:13-52
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:304:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:303:13-51
+activity#org.petero.droidfish.activities.EditPGNSave
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:306:9-309:55
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:309:13-52
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:308:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:307:13-51
+activity#org.petero.droidfish.activities.LoadScid
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:310:9-313:60
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:313:13-57
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:312:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:311:13-48
+activity#org.petero.droidfish.activities.LoadFEN
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:314:9-317:54
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:317:13-51
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:316:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:315:13-47
+activity#org.petero.droidfish.activities.CPUWarning
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:318:9-320:57
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:320:13-54
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:319:13-50
+activity#org.petero.droidfish.activities.EditOptions
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:321:9-323:62
+	android:configChanges
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:323:13-59
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:322:13-51
+activity#org.petero.droidfish.FullScannerActivity
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:324:9-332:20
+	android:label
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:326:13-53
+	android:uiOptions
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:328:13-57
+	android:theme
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:327:13-51
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:325:13-48
+meta-data#android.support.UI_OPTIONS
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:329:13-331:60
+	android:value
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:331:17-57
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:330:17-58
+activity#org.petero.droidfish.qr.QRResultActivity
+ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:333:9-66
+	android:name
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml:333:19-54
+uses-sdk
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:21:5-23:78
+MERGED from [me.dm7.barcodescanner:core:1.9.3] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\core-1.9.3.aar\b74801c57a593138f543086f729640f8\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.3] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\core-1.9.3.aar\b74801c57a593138f543086f729640f8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\76cdafdde1fd3e453131817bf42424a2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\76cdafdde1fd3e453131817bf42424a2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RenatoMSI\AndroidStudio\DroidFishTFG\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:appcompat-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-beta2.aar\8a52b01fb377b7fc244bcb3c874b25e5\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.0-beta2.aar\d5f99b1134aa77efd66b1f613f2abd43\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.0-beta2.aar\0cef216aa3bbac1a8c0d307b9a0df3bb\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-beta2.aar\740b3af4e2998abf567e8087cb61eb2d\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:transition:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\transition-26.0.0-beta2.aar\1af1d4637174df2ff191a8b1d3ab0351\AndroidManifest.xml:23:9-25:44
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-v4:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.0-beta2.aar\4737e0a6ac9c99a8734cb4e452f6f2fd\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-fragment:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.0-beta2.aar\2aaa8b30ee4bd8ef550d0d53b0a7d834\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-core-ui:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.0-beta2.aar\efdd9b8135ad248c9891603ce0d9c57e\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-media-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.0-beta2.aar\4765e45fdec34eefd9636dfc812a5ca6\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-core-utils:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.0-beta2.aar\f6b42475674c31f31638affc247a3f70\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:26:9-28:44
+MERGED from [com.android.support:support-compat:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.0-beta2.aar\36fa51706f65fc66ff867b67d0beeaf5\AndroidManifest.xml:26:9-28:44
+	android:value
+		ADDED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:28:13-41
+	android:name
+		ADDED from [com.android.support:design:26.0.0-beta2] C:\Users\RenatoMSI\.gradle\caches\transforms-1\files-1.1\design-26.0.0-beta2.aar\ea998d3de823f9fa2fb26e102f27a357\AndroidManifest.xml:27:13-51
